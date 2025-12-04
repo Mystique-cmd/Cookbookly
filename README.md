@@ -1,3 +1,4 @@
+```
 recipe-website/
 │
 ├── index.php              # Home page
@@ -51,3 +52,4 @@ recipe-website/
 │   └── users/             # User profile pictures
 │
 └── README.md              # Project documentation
+```
