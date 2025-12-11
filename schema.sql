@@ -1,6 +1,3 @@
- -------------------------
--- USERS TABLE
--- -------------------------
 CREATE TABLE users (
   id INT(11) NOT NULL AUTO_INCREMENT,
   username VARCHAR(255) NOT NULL,
@@ -15,9 +12,7 @@ CREATE TABLE users (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- CATEGORIES TABLE
--- -------------------------
+
 CREATE TABLE categories (
   id INT(11) NOT NULL AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,
@@ -28,9 +23,7 @@ CREATE TABLE categories (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- HEALTH CONDITIONS TABLE
--- -------------------------
+
 CREATE TABLE health_conditions (
   id INT(11) NOT NULL AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,
@@ -41,9 +34,7 @@ CREATE TABLE health_conditions (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- RECIPES TABLE
--- -------------------------
+
 CREATE TABLE recipes (
   id INT(11) NOT NULL AUTO_INCREMENT,
   user_id INT(11) NOT NULL,
@@ -70,9 +61,7 @@ CREATE TABLE recipes (
   CONSTRAINT recipes_health_fk FOREIGN KEY (health_condition_id) REFERENCES health_conditions (id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- RECIPE INGREDIENTS TABLE
--- -------------------------
+
 CREATE TABLE recipe_ingredients (
   id INT(11) NOT NULL AUTO_INCREMENT,
   recipe_id INT(11) NOT NULL,
@@ -88,9 +77,6 @@ CREATE TABLE recipe_ingredients (
   CONSTRAINT recipe_ing_fk FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- RECIPE STEPS TABLE
--- -------------------------
 CREATE TABLE recipe_steps (
   id INT(11) NOT NULL AUTO_INCREMENT,
   recipe_id INT(11) NOT NULL,
@@ -103,9 +89,7 @@ CREATE TABLE recipe_steps (
   CONSTRAINT recipe_steps_fk FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- FAVORITES TABLE
--- -------------------------
+
 CREATE TABLE favorites (
   id INT(11) NOT NULL AUTO_INCREMENT,
   user_id INT(11) NOT NULL,
@@ -118,9 +102,6 @@ CREATE TABLE favorites (
   CONSTRAINT fav_rec_fk FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- REVIEWS TABLE
--- -------------------------
 CREATE TABLE reviews (
   id INT(11) NOT NULL AUTO_INCREMENT,
   user_id INT(11) NOT NULL,
@@ -136,9 +117,6 @@ CREATE TABLE reviews (
   CONSTRAINT rev_recipe_fk FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- USER HEALTH PREFERENCES
--- -------------------------
 CREATE TABLE user_health_preferences (
   id INT(11) NOT NULL AUTO_INCREMENT,
   user_id INT(11) NOT NULL,
@@ -152,9 +130,6 @@ CREATE TABLE user_health_preferences (
   CONSTRAINT uhp_health_fk FOREIGN KEY (health_id) REFERENCES health_conditions (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- RECENTLY VIEWED TABLE
--- -------------------------
 CREATE TABLE recently_viewed (
   id INT(11) NOT NULL AUTO_INCREMENT,
   user_id INT(11) NOT NULL,
@@ -167,9 +142,6 @@ CREATE TABLE recently_viewed (
   CONSTRAINT rv_recipe_fk FOREIGN KEY (recipe_id) REFERENCES recipes (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- USER ACTIVITY TABLE
--- -------------------------
 CREATE TABLE user_activity (
   id INT(11) NOT NULL AUTO_INCREMENT,
   user_id INT(11) NOT NULL,
@@ -181,9 +153,6 @@ CREATE TABLE user_activity (
   CONSTRAINT ua_user_fk FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- -------------------------
--- CONTACT MESSAGES TABLE
--- -------------------------
 CREATE TABLE contact_messages (
   id INT(11) NOT NULL AUTO_INCREMENT,
   user_id INT(11) DEFAULT NULL,
