@@ -1,4 +1,6 @@
 ```
+The datatables folder holds the sql files.Something worth noting is that the image_recipes.sql is not a table by itself, I added it as a column in the recipes table and has the image URLs of the recipe
+-All other tables follow the structure in the schema.sql
 recipe-website/
 │
 ├── index.php              # Home page
