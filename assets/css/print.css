@@ -1,0 +1,85 @@
+/* Print-Specific Styles */
+
+@media print {
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.4;
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  .sidebar,
+  .profile-nav,
+  .actions,
+  .btn,
+  .form-container,
+  .comment-form,
+  .recipe-card-footer,
+  #notification-container {
+    display: none;
+  }
+
+  /* Show the main content only */
+  .main-content,
+  .profile-content,
+  .recipe-single {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Recipe-specific print styles */
+  .recipe-single h1 {
+    font-size: 24pt;
+    margin-bottom: 1rem;
+  }
+
+  .recipe-single-image {
+    max-width: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    page-break-inside: avoid;
+  }
+
+  .recipe-meta {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .ingredients,
+  .instructions {
+    margin-bottom: 1.5rem;
+  }
+
+  .ingredients ul,
+  .instructions ol {
+    padding-left: 20px;
+  }
+
+  /* Ensure links are visible when printed */
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
