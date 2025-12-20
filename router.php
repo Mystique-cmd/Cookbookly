@@ -1,22 +1,54 @@
 <?php
 // router.php
-$request_uri = $_SERVER["REQUEST_URI"];
-
-// Remove query string for routing purposes
+$request_uri = $_SERVER['REQUEST_URI'];
 $request_path = parse_url($request_uri, PHP_URL_PATH);
 
-// Serve static files directly
-if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js)$/', $request_path)) {
+// Serve static files directly from the src/assets folder
+if (preg_match('/^\/src\/assets\//', $request_path)) {
     return false;
 }
 
-// Custom routing for specific pages
-if ($request_path === '/register') {
-    require 'register.php';
-} elseif ($request_path === '/login') {
-    require 'login.php';
-} else {
-    // Fallback to index.php for all other requests
-    require 'index.php';
+// Route requests to the appropriate controller
+switch ($request_path) {
+    case '/':
+        require 'src/index.php';
+        break;
+    case '/recipes':
+        require 'src/recipes.php';
+        break;
+    case '/recipe':
+        require 'src/recipe.php';
+        break;
+    case '/categories':
+        require 'src/categories.php';
+        break;
+    case '/category':
+        require 'src/category.php';
+        break;
+    case '/about':
+        require 'src/about.php';
+        break;
+    case '/contact':
+        require 'src/contact.php';
+        break;
+    case '/login':
+        require 'src/login.php';
+        break;
+    case '/register':
+        require 'src/register.php';
+        break;
+    case '/search':
+        require 'src/search.php';
+        break;
+    default:
+        // Handle admin and user routes
+        if (preg_match('/^\/admin\//', $request_path)) {
+            require 'src/admin/router.php';
+        } elseif (preg_match('/^\/user\//', $request_path)) {
+            require 'src/user/router.php';
+        } else {
+            http_response_code(404);
+            require 'src/404.php';
+        }
+        break;
 }
-?>

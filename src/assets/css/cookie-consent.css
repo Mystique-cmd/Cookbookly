@@ -1,0 +1,28 @@
+#cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2a2a2a;
+    color: #eee;
+    padding: 15px;
+    text-align: center;
+    z-index: 100;
+    display: none;
+}
+
+#cookie-consent-banner p {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#cookie-consent-accept {
+    background-color: #00cc99;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
