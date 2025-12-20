@@ -95,16 +95,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <?php include 'includes/header.php'; ?>
 
 <main>
-    <h1>Login</h1>
-    <form action="login.php" method="post">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <span><?php echo $email_err; ?></span>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <span><?php echo $password_err; ?></span>
-        <button type="submit">Login</button>
-    </form>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="login.php" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span><?php echo $email_err; ?></span>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span><?php echo $password_err; ?></span>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </main>
 
 <?php include 'includes/footer.php'; ?>

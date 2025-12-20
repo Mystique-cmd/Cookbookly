@@ -115,22 +115,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($link);
 }
 ?>
-<?php include 'includes/header.php'; ?>
+<?php include 'header.php'; ?>
 
 <main>
-    <h1>Register</h1>
-    <form action="register.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <span><?php echo $username_err; ?></span>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <span><?php echo $email_err; ?></span>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <span><?php echo $password_err; ?></span>
-        <button type="submit">Register</button>
-    </form>
+    <div class="login-container">
+        <h1>Register</h1>
+        <form action="register.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <span><?php echo $username_err; ?></span>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span><?php echo $email_err; ?></span>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span><?php echo $password_err; ?></span>
+            <button type="submit">Register</button>
+        </form>
+    </div>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'footer.php'; ?>
