@@ -87,10 +87,10 @@ You have two options for running the web server:
     ```apache
     <VirtualHost *:80>
         ServerAdmin webmaster@localhost
-        DocumentRoot "/home/mystique/Desktop/Grandma's Kitchen"
+        DocumentRoot "path_to_your_directory"
         ServerName grandmaskitchen.local
 
-        <Directory "/home/mystique/Desktop/Grandma's Kitchen">
+        <Directory "path_to_your_directory">
             Options Indexes FollowSymLinks
             AllowOverride All
             Require all granted
@@ -122,13 +122,13 @@ You have two options for running the web server:
 
     *   **Grant execute permission to parent directories:**
         ```bash
-        sudo chmod o+x /home/mystique/
-        sudo chmod o+x /home/mystique/Desktop/
+        sudo chmod o+x /home/username/
+        sudo chmod o+x /home/username/Desktop/
         ```
     *   **Set ownership and permissions for the project directory:**
         ```bash
-        sudo chown -R www-data:www-data "/home/mystique/Desktop/Grandma's Kitchen"
-        sudo chmod -R 755 "/home/mystique/Desktop/Grandma's Kitchen"
+        sudo chown -R www-data:www-data "path_to_yout_directory"
+        sudo chmod -R 755 "path_to_your_directory"
         ```
 
 7.  **Test Apache Configuration and Restart:**
