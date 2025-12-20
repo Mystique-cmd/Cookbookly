@@ -314,3 +314,72 @@ body.dark-mode .recipe-of-the-day {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #555;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button[type="submit"] {
+    width: auto;
+    display: block;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+/* Contact Information Styles */
+.contact-details {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+/* Map Placeholder Styles */
+.map-placeholder {
+    height: 400px; /* Increased height for better visual */
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #757575;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

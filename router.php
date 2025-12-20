@@ -5,50 +5,53 @@ $request_path = parse_url($request_uri, PHP_URL_PATH);
 
 // Serve static files directly from the src/assets folder
 if (preg_match('/^\/src\/assets\//', $request_path)) {
-    return false;
+    $asset_path = '.' . $request_path;
+    if (file_exists($asset_path)) {
+        return false;
+    }
 }
 
 // Route requests to the appropriate controller
 switch ($request_path) {
     case '/':
-        require 'src/index.php';
+        require __DIR__ . '/src/index.php';
         break;
     case '/recipes':
-        require 'src/recipes.php';
+        require __DIR__ . '/src/recipes.php';
         break;
     case '/recipe':
-        require 'src/recipe.php';
+        require __DIR__ . '/src/recipe.php';
         break;
     case '/categories':
-        require 'src/categories.php';
+        require __DIR__ . '/src/categories.php';
         break;
     case '/category':
-        require 'src/category.php';
+        require __DIR__ . '/src/category.php';
         break;
     case '/about':
-        require 'src/about.php';
+        require __DIR__ . '/src/about.php';
         break;
     case '/contact':
-        require 'src/contact.php';
+        require __DIR__ . '/src/contact.php';
         break;
     case '/login':
-        require 'src/login.php';
+        require __DIR__ . '/src/login.php';
         break;
     case '/register':
-        require 'src/register.php';
+        require __DIR__ . '/src/register.php';
         break;
     case '/search':
-        require 'src/search.php';
+        require __DIR__ . '/src/search.php';
         break;
     default:
         // Handle admin and user routes
         if (preg_match('/^\/admin\//', $request_path)) {
-            require 'src/admin/router.php';
+            require __DIR__ . '/src/admin/router.php';
         } elseif (preg_match('/^\/user\//', $request_path)) {
-            require 'src/user/router.php';
+            require __DIR__ . '/src/user/router.php';
         } else {
             http_response_code(404);
-            require 'src/404.php';
+            require __DIR__ . '/src/404.php';
         }
         break;
 }

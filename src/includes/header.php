@@ -22,15 +22,15 @@
         <nav>
             <ul>
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="/recipes.php">Recipes</a></li>
-                <li><a href="/categories.php">Categories</a></li>
-                <li><a href="/about.php">About</a></li>
-                <li><a href="/contact.php">Contact</a></li>
+                <li><a href="/recipes">Recipes</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
         <div>
-            <a href="/login.php" class="btn btn-secondary">Login</a>
-            <a href="/register.php" class="btn btn-primary">Register</a>
+            <a href="/login" class="btn btn-secondary">Login</a>
+            <a href="/register" class="btn btn-primary">Register</a>
             <div class="dark-mode-toggle">
                 <input type="checkbox" id="dark-mode-switch">
                 <label for="dark-mode-switch"></label>
