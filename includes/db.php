@@ -1,10 +1,10 @@
 <?php
 $servername ="localhost";
 $username = "root";
-$password = "password";
-$dbname = "Cookbookly";
+$password = "";
+$dbname = "recipe_website";
 
-$link = mysqli_connect("localhost", "root", "password", "Cookbookly");
+$link = mysqli_connect("localhost", "root", "", "recipe_website");
 
 if (!$link) {
     die("Connection failed: " . mysqli_connect_error());
