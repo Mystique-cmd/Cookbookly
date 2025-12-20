@@ -50,10 +50,10 @@ npm install
 Navigate to the project's root directory and run:
 
 ```bash
-php -S localhost:8000
+php -S localhost:8000 router.php
 ```
 
-Then access the application at `http://localhost:8000/`.
+Then access the application at `http://localhost:8000/src`.
 
 #### Option B: Apache or Nginx
 
