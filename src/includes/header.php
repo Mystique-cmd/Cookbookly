@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/src/assets/css/style.css">
+    <link rel="stylesheet" href="/src/assets/css/login.css">
     <link rel="stylesheet" href="/src/assets/css/back-to-top.css">
     <link rel="stylesheet" href="/src/assets/css/dark-mode.css">
     <link rel="stylesheet" href="/src/assets/css/cookie-consent.css">
