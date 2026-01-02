@@ -2,47 +2,59 @@
 
 <main id="main-content">
     <!-- Hero Section for Recipes -->
-    <section class="hero" aria-labelledby="recipes-hero-heading">
+    <section class="hero py-5 text-center bg-light" aria-labelledby="recipes-hero-heading">
         <div class="container">
-            <h1 id="recipes-hero-heading">Explore Our Delicious Recipes</h1>
-            <p>Find your next favorite meal from our extensive collection.</p>
-            <form action="/search.php" method="get" class="search-bar" role="search">
-                <input type="text" name="query" placeholder="Search all recipes..." aria-label="Search all recipes">
+            <h1 id="recipes-hero-heading" class="display-4 fw-bold">Explore Our Delicious Recipes</h1>
+            <p class="lead">Find your next favorite meal from our extensive collection.</p>
+            <form action="/search.php" method="get" class="input-group mb-3 mx-auto" style="max-width: 500px;" role="search">
+                <input type="text" name="query" placeholder="Search all recipes..." aria-label="Search all recipes" class="form-control">
                 <button type="submit" class="btn btn-primary">Search</button>
             </form>
         </div>
     </section>
 
     <!-- Latest Recipes Section -->
-    <section class="featured-recipes" aria-labelledby="latest-recipes-heading">
+    <section class="featured-recipes py-5" aria-labelledby="latest-recipes-heading">
         <div class="container">
-            <h2 id="latest-recipes-heading">Latest Recipes</h2>
-            <div class="recipe-cards">
-                <div class="recipe-card">
-                    <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load">
-                    <h3><a href="/recipe.php?id=5">Creamy Tomato Pasta</a></h3>
-                    <p>A quick and easy weeknight dinner.</p>
+            <h2 id="latest-recipes-heading" class="text-center mb-4">Latest Recipes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="/recipe.php?id=5">Creamy Tomato Pasta</a></h3>
+                            <p class="card-text">A quick and easy weeknight dinner.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load">
-                    <h3><a href="/recipe.php?id=6">Vegetable Stir-fry</a></h3>
-                    <p>Healthy and flavorful, customizable with your favorite veggies.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="/recipe.php?id=6">Vegetable Stir-fry</a></h3>
+                            <p class="card-text">Healthy and flavorful, customizable with your favorite veggies.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="recipe-card">
-                    <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load">
-                    <h3><a href="/recipe.php?id=7">Lemon Herb Roasted Chicken</a></h3>
-                    <p>Juicy chicken with aromatic herbs and zesty lemon.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title"><a href="/recipe.php?id=7">Lemon Herb Roasted Chicken</a></h3>
+                            <p class="card-text">Juicy chicken with aromatic herbs and zesty lemon.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section class="cta" aria-labelledby="cta-heading-recipes">
+    <section class="cta py-5 bg-primary text-white text-center" aria-labelledby="cta-heading-recipes">
         <div class="container">
-            <h2 id="cta-heading-recipes">Can't find what you're looking for?</h2>
-            <p>Submit your own recipe and share it with the community!</p>
-            <a href="/user/add_recipe.php" class="btn btn-primary">Submit Your Recipe</a>
+            <h2 id="cta-heading-recipes" class="mb-3">Can't find what you're looking for?</h2>
+            <p class="lead">Submit your own recipe and share it with the community!</p>
+            <a href="/user/add_recipe.php" class="btn btn-light btn-lg mt-3">Submit Your Recipe</a>
         </div>
     </section>
 </main>
