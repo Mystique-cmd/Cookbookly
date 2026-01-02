@@ -48,22 +48,28 @@ mysqli_close($link);
 ?>
 <?php include 'includes/header.php'; ?>
 
-<main>
-    <h1>Recipes in <?php echo $category_name; ?></h1>
-    <div class="recipe-grid">
-        <?php if (!empty($recipes)) : ?>
-            <?php foreach ($recipes as $recipe) : ?>
-                <div class="recipe-card">
-                    <a href="recipe.php?id=<?php echo $recipe['id']; ?>">
-                        <img src="uploads/recipes/<?php echo $recipe['recipe_image']; ?>" alt="<?php echo $recipe['title']; ?>">
-                        <h3><?php echo $recipe['title']; ?></h3>
-                        <p><?php echo substr($recipe['description'], 0, 100); ?>...</p>
-                    </a>
-                </div>
-            <?php endforeach; ?>
-        <?php else : ?>
-            <p>No recipes found in this category.</p>
-        <?php endif; ?>
+<main id="main-content" class="py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Recipes in <?php echo $category_name; ?></h1>
+        <div class="row">
+            <?php if (!empty($recipes)) : ?>
+                <?php foreach ($recipes as $recipe) : ?>
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <a href="recipe.php?id=<?php echo $recipe['id']; ?>">
+                                <img src="uploads/recipes/<?php echo $recipe['recipe_image']; ?>" alt="<?php echo $recipe['title']; ?>" class="card-img-top">
+                                <div class="card-body">
+                                    <h3 class="card-title"><?php echo $recipe['title']; ?></h3>
+                                    <p class="card-text"><?php echo substr($recipe['description'], 0, 100); ?>...</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else : ?>
+                <p class="text-center">No recipes found in this category.</p>
+            <?php endif; ?>
+        </div>
     </div>
 </main>
 

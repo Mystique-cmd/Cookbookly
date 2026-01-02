@@ -1,97 +1,55 @@
-.dark-mode-toggle {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 15px;
-}
-
-#dark-mode-switch {
-    display: none;
-}
-
-#dark-mode-switch + label {
-    display: block;
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 25px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#dark-mode-switch + label::before {
-    content: '';
-    display: block;
-    width: 21px;
-    height: 21px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s ease;
-}
-
-#dark-mode-switch:checked + label {
-    background-color: #00cc99;
-}
-
-#dark-mode-switch:checked + label::before {
-    transform: translateX(25px);
-}
-
-/* Dark Mode Styles */
 body.dark-mode {
-    background-color: #1a1a1a;
-    color: #eee;
+    background-color: #343a40; /* Dark background */
+    color: #f8f9fa; /* Light text */
 }
 
-body.dark-mode header {
-    background-color: #2a2a2a;
-    border-bottom-color: #444;
+body.dark-mode .navbar {
+    background-color: #212529 !important; /* Darker navbar */
 }
 
-body.dark-mode .logo {
-    color: #00cc99;
+body.dark-mode .navbar .nav-link {
+    color: #f8f9fa !important;
 }
 
-body.dark-mode nav ul li a {
-    color: #eee;
+body.dark-mode .navbar .navbar-brand {
+    color: #f8f9fa !important;
 }
 
-body.dark-mode nav ul li a:hover,
-body.dark-mode nav ul li a.active {
-    color: #eb2d8c;
+body.dark-mode .hero {
+    background-color: #495057 !important; /* Darker hero section */
+    color: #f8f9fa !important;
 }
 
-body.dark-mode .btn-secondary {
-    color: #eb2d8c;
-    border-color: #eb2d8c;
+body.dark-mode .card {
+    background-color: #495057 !important; /* Darker cards */
+    color: #f8f9fa !important;
+    border-color: #6c757d !important;
 }
 
-body.dark-mode .btn-secondary:hover {
-    background-color: #eb2d8c;
-    color: #fff;
+body.dark-mode .card-title a {
+    color: #f8f9fa !important;
 }
 
-body.dark-mode .recipe-card {
-    background-color: #2a2a2a;
+body.dark-mode .btn-outline-primary {
+    color: #f8f9fa !important;
+    border-color: #f8f9fa !important;
 }
 
-body.dark-mode .recipe-card h3 a {
-    color: #eee;
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #f8f9fa !important;
+    color: #343a40 !important;
 }
 
-body.dark-mode .categories {
-    background-color: #2a2a2a;
+body.dark-mode .bg-primary {
+    background-color: #0056b3 !important; /* Darker primary for CTA */
 }
 
-body.dark-mode .category-link {
-    background-color: #3a3a3a;
-    color: #eee;
+body.dark-mode footer {
+    background-color: #212529 !important; /* Darker footer */
 }
 
-body.dark-mode .category-link:hover {
-    background-color: #00cc99;
-    color: #fff;
+body.dark-mode .alert-info {
+    background-color: #495057 !important;
+    color: #f8f9fa !important;
+    border-color: #6c757d !important;
 }

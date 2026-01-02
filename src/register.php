@@ -91,16 +91,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($username_err) && empty($email_err) && empty($password_err)) {
 
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_email, $param_password);
+            mysqli_stmt_bind_param($stmt, "ssss", $param_username, $param_email, $param_password, $param_role);
 
             // Set parameters
             $param_username = $username;
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_role = 'user'; // Default role for new users
 
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
