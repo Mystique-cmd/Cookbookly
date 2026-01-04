@@ -1,8 +1,8 @@
 <?php
-require_once '../includes/auth_check.php';
+require_once __DIR__ . '/../includes/auth_check.php';
 check_user_access();
 
-require_once "../includes/db.php";
+require_once __DIR__ . '/../includes/db.php';
 
 $user_id = $_SESSION["id"];
 
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $recipe_image = ""; // Default empty image name
     // Handle image upload
     if (isset($_FILES["recipe_image"]) && $_FILES["recipe_image"]["error"] == 0) {
-        $target_dir = "../uploads/recipes/";
+        $target_dir = __DIR__ . "/../uploads/recipes/";
         $imageFileType = strtolower(pathinfo($_FILES["recipe_image"]["name"],PATHINFO_EXTENSION));
         $new_image_name = uniqid() . "." . $imageFileType;
         $target_file = $target_dir . $new_image_name;
@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt = mysqli_prepare($link, $sql)) {
             mysqli_stmt_bind_param($stmt, "isssissssss", $user_id, $title, $description, $category_id, $health_condition_id, $prep_time, $cook_time, $servings, $recipe_image, $ingredients, $instructions);
             if (mysqli_stmt_execute($stmt)) {
-                header("location: my_recipes.php");
+                header("location: /user/my_recipes");
                 exit();
             } else {
                 echo "Something went wrong. Please try again later.";
@@ -80,11 +80,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
-<?php include '../includes/header.php'; ?>
+<?php include __DIR__ . '/../includes/header.php'; ?>
 
 <main>
     <h2>Add New Recipe</h2>
-    <form action="add_recipe.php" method="post" enctype="multipart/form-data">
+    <form action="/user/add_recipe" method="post" enctype="multipart/form-data">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" value="<?php echo $title ?? ''; ?>" required>
         <span><?php echo $title_err; ?></span>
@@ -138,4 +138,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </main>
 
-<?php include '../includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

@@ -4,7 +4,7 @@ $request_uri = $_SERVER['REQUEST_URI'];
 $request_path = parse_url($request_uri, PHP_URL_PATH);
 
 // Remove /user prefix
-$request_path = str_replace('/user', '', $request_path);
+$request_path = trim(str_replace('/user', '', $request_path));
 
 switch ($request_path) {
     case '/':
@@ -49,6 +49,6 @@ switch ($request_path) {
         break;
     default:
         http_response_code(404);
-        require '../404.php';
+        require __DIR__ . '/../404.php';
         break;
 }

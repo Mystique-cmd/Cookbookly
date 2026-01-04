@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // router.php
 $request_uri = $_SERVER['REQUEST_URI'];
 $request_path = parse_url($request_uri, PHP_URL_PATH);

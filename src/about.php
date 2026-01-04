@@ -37,7 +37,7 @@
         <div class="container">
             <h2 id="cta-heading-about" class="mb-3">Join Our Culinary Journey</h2>
             <p class="lead">Become a part of the Cookbookly community today and start sharing your passion for food!</p>
-            <a href="/register.php" class="btn btn-light btn-lg mt-3">Sign Up Now</a>
+            <a href="/register" class="btn btn-light btn-lg mt-3">Sign Up Now</a>
         </div>
     </section>
 </main>

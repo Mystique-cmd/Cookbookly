@@ -1,22 +1,18 @@
 <?php
 // includes/db.php
 
+// Hardcode database credentials for testing purposes
+$servername = 'localhost';
+$username = 'admin';
+$password = 'password'; // <--- IMPORTANT: REPLACE THIS WITH YOUR REAL DATABASE PASSWORD
+$dbname = 'cookbookly';
+
+// The rest of the original .env loading and parsing code is commented out or removed
+// as we are bypassing it for this test.
+/*
 // Function to parse .env file
 function parseEnv($filePath) {
-    $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    foreach ($lines as $line) {
-        if (strpos(trim($line), '#') === 0) {
-            continue;
-        }
-        list($name, $value) = explode('=', $line, 2);
-        $name = trim($name);
-        $value = trim($value);
-        if (!array_key_exists($name, $_SERVER) && !array_key_exists($name, $_ENV)) {
-            putenv(sprintf('%s=%s', $name, $value));
-            $_ENV[$name] = $value;
-            $_SERVER[$name] = $value;
-        }
-    }
+    // ... (original parseEnv function content)
 }
 
 // Load environment variables
@@ -24,11 +20,12 @@ $dotenv = __DIR__ . '/../.env';
 if (file_exists($dotenv)) {
     parseEnv($dotenv);
 }
-
-$servername = $_ENV['DB_HOST'] ?? 'localhost';
-$username = $_ENV['DB_USERNAME'] ?? 'root';
-$password = $_ENV['DB_PASSWORD'] ?? '';
-$dbname = $_ENV['DB_DATABASE'] ?? 'recipe_website';
+*/
+// The variables below will now use the hardcoded values above instead of $_ENV
+// $servername = $_ENV['DB_HOST'] ?? 'localhost';
+// $username = $_ENV['DB_USERNAME'] ?? 'root';
+// $password = $_ENV['DB_PASSWORD'] ?? '';
+// $dbname = $_ENV['DB_DATABASE'] ?? 'recipe_website';
 
 $link = mysqli_connect($servername, $username, $password, $dbname);
 

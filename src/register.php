@@ -103,12 +103,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             $param_role = 'user'; // Default role for new users
 
-            // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
-                // Redirect to login page
-                header("location: login.php");
+                header("location: /login");
+                exit;
             } else {
-                echo "Something went wrong. Please try again later.";
+                echo "Error: Could not add user. " . mysqli_stmt_error($stmt);
             }
 
             // Close statement
@@ -120,12 +119,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($link);
 }
 ?>
-<?php include 'header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <main>
     <div class="login-container">
         <h1>Register</h1>
-        <form action="register.php" method="post">
+        <form action="/register" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <span><?php echo $username_err; ?></span>
@@ -140,4 +139,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </main>
 
-<?php include 'footer.php'; ?>
+<?php include 'includes/footer.php'; ?>

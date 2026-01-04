@@ -88,7 +88,7 @@
         <div class="container">
             <h2 class="mb-3">Share Your Own Recipes</h2>
             <p class="lead">Join our community and share your culinary creations with the world.</p>
-            <a href="/register.php" class="btn btn-light btn-lg mt-3">Join Now</a>
+            <a href="/register" class="btn btn-light btn-lg mt-3">Join Now</a>
         </div>
     </section>
 </main>

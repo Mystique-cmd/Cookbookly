@@ -54,7 +54,7 @@
         <div class="container">
             <h2 id="cta-heading-recipes" class="mb-3">Can't find what you're looking for?</h2>
             <p class="lead">Submit your own recipe and share it with the community!</p>
-            <a href="/user/add_recipe.php" class="btn btn-light btn-lg mt-3">Submit Your Recipe</a>
+            <a href="/user/add_recipe" class="btn btn-light btn-lg mt-3">Submit Your Recipe</a>
         </div>
     </section>
 </main>

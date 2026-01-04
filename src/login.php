@@ -66,9 +66,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // Redirect user to appropriate dashboard
                             if($role == 'admin'){
-                                header("location: admin/index.php");
+                                header("location: /admin");
                             } else {
-                                header("location: user/index.php");
+                                header("location: /user");
                             }
                         } else{
                             // Display an error message if password is not valid

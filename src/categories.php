@@ -60,7 +60,7 @@ mysqli_close($link);
         <div class="container">
             <h2 id="cta-heading-categories" class="mb-3">Have a new category idea?</h2>
             <p class="lead">Suggest a new category to expand our collection!</p>
-            <a href="/contact.php" class="btn btn-light btn-lg mt-3">Suggest Category</a>
+            <a href="/register" class="btn btn-light btn-lg mt-3">Suggest Category</a>
         </div>
     </section>
 </main>
