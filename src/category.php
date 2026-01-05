@@ -11,7 +11,7 @@ if (isset($_GET["id"]) && !empty(trim($_GET["id"]))) {
     $category_id = trim($_GET["id"]);
 
     // Fetch category name
-    $sql_category_name = "SELECT name FROM categories WHERE id = ?";
+    $sql_category_name = "SELECT name, image_url FROM categories WHERE id = ?";
     if ($stmt_category_name = mysqli_prepare($link, $sql_category_name)) {
         mysqli_stmt_bind_param($stmt_category_name, "i", $category_id);
         if (mysqli_stmt_execute($stmt_category_name)) {
@@ -51,6 +51,11 @@ mysqli_close($link);
 <main id="main-content" class="py-5">
     <div class="container">
         <h1 class="text-center mb-4">Recipes in <?php echo $category_name; ?></h1>
+        <?php if (!empty($category['image_url'])) : ?>
+            <div class="text-center mb-4">
+                <img src="uploads/categories/<?php echo $category['image_url']; ?>" alt="<?php echo $category_name; ?>" class="img-fluid rounded" style="max-height: 200px; object-fit: cover;">
+            </div>
+        <?php endif; ?>
         <div class="row">
             <?php if (!empty($recipes)) : ?>
                 <?php foreach ($recipes as $recipe) : ?>

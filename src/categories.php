@@ -7,7 +7,7 @@ require_once "includes/db.php";
 $categories = [];
 
 // Fetch all categories
-$sql = "SELECT id, name, description FROM categories WHERE status = 1 ORDER BY name ASC";
+$sql = "SELECT id, name, description, image_url FROM categories WHERE status = 1 ORDER BY name ASC";
 $result = mysqli_query($link, $sql);
 $categories = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -39,7 +39,7 @@ mysqli_close($link);
                         <div class="col-md-4 mb-4">
                             <div class="card shadow-sm">
                                 <a href="category.php?id=<?php echo $category['id']; ?>">
-                                    <img src="assets/images/placeholder_category.png" alt="<?php echo $category['name']; ?>" class="card-img-top">
+                                    <img src="uploads/categories/<?php echo $category['image_url']; ?>" alt="<?php echo $category['name']; ?>" class="card-img-top">
                                     <div class="card-body">
                                         <h3 class="card-title"><?php echo $category['name']; ?></h3>
                                         <p class="card-text"><?php echo $category['description']; ?></p>

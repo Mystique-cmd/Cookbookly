@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <img src="https://plus.unsplash.com/premium_photo-1701013639121-db90aefda5f2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3JlYW15JTIwdG9tYXRvJTIwcGFzdGF8ZW58MHx8MHx8fDA%3D" alt="Recipe Image" class="lazy-load card-img-top">
                         <div class="card-body">
                             <h3 class="card-title"><a href="/recipe.php?id=5">Creamy Tomato Pasta</a></h3>
                             <p class="card-text">A quick and easy weeknight dinner.</p>
@@ -29,16 +29,16 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <img src="https://images.unsplash.com/photo-1758979690131-11e2aa0b142b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dmVnZXRhYmxlJTIwc3RpciUyMGZyeXxlbnwwfHwwfHx8MA%3D%3D" alt="Recipe Image" class="lazy-load card-img-top">
                         <div class="card-body">
                             <h3 class="card-title"><a href="/recipe.php?id=6">Vegetable Stir-fry</a></h3>
-                            <p class="card-text">Healthy and flavorful, customizable with your favorite veggies.</p>
+                            <p class="card-text">Healthy and flavorful, customizable.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <img src="https://plus.unsplash.com/premium_photo-1668616816737-ac363cc4db2e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGVtb24lMjBoZXJiJTIwcm9hc3RlZCUyMGNoaWNrZW58ZW58MHx8MHx8fDA%3D" alt="Recipe Image" class="lazy-load card-img-top">
                         <div class="card-body">
                             <h3 class="card-title"><a href="/recipe.php?id=7">Lemon Herb Roasted Chicken</a></h3>
                             <p class="card-text">Juicy chicken with aromatic herbs and zesty lemon.</p>

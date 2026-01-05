@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <img src="https://plus.unsplash.com/premium_photo-1691948106030-d5e76d461b14?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BhZ2hldHRpJTIwY2FyYm9uYXJhfGVufDB8fDB8fHww" alt="Recipe Image" class="lazy-load card-img-top">
                         <div class="card-body">
                             <h3 class="card-title"><a href="/recipe.php?id=1">Spaghetti Carbonara</a></h3>
                             <p class="card-text">A classic Italian pasta dish.</p>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <img src="https://plus.unsplash.com/premium_photo-1692835633672-50919fdffb75?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMHRpa2thJTIwbWFzYWxhfGVufDB8fDB8fHww" alt="Recipe Image" class="lazy-load card-img-top">
                         <div class="card-body">
                             <h3 class="card-title"><a href="/recipe.php?id=2">Chicken Tikka Masala</a></h3>
                             <p class="card-text">Creamy and flavorful Indian curry.</p>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm">
-                        <img data-src="https://placehold.co/400x300" alt="Recipe Image" class="lazy-load card-img-top">
+                        <img src="https://plus.unsplash.com/premium_photo-1670895802097-c9749ab2dc5f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2hvY29sYXRlJTIwY2hpcCUyMGNvb2tpZXN8ZW58MHx8MHx8fDA%3D" alt="Recipe Image" class="lazy-load card-img-top">
                         <div class="card-body">
                             <h3 class="card-title"><a href="/recipe.php?id=3">Chocolate Chip Cookies</a></h3>
                             <p class="card-text">The perfect homemade cookies.</p>
@@ -56,7 +56,7 @@
             <div class="card mb-3 shadow-sm">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img data-src="https://placehold.co/600x400" alt="Recipe Image" class="lazy-load img-fluid rounded-start w-100 h-100 object-fit-cover">
+                        <img src="https://plus.unsplash.com/premium_photo-1667428304126-52e44e315dab?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2xhc3NpYyUyMGJlZWYlMjBzdGV3fGVufDB8fDB8fHww" alt="Recipe Image" class="lazy-load img-fluid rounded-start w-100 h-100 object-fit-cover">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
