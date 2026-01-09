@@ -74,13 +74,7 @@
     <section class="categories py-5" aria-labelledby="categories-heading">
         <div class="container">
             <h2 id="categories-heading" class="text-center mb-4">Browse by Category</h2>
-            <div class="d-flex flex-wrap justify-content-center gap-2">
-                <a href="/category.php?name=Italian" class="btn btn-outline-primary">Italian</a>
-                <a href="/category.php?name=Indian" class="btn btn-outline-primary">Indian</a>
-                <a href="/category.php?name=Desserts" class="btn btn-outline-primary">Desserts</a>
-                <a href="/category.php?name=American" class="btn btn-outline-primary">American</a>
-            </div>
-        </div>
+            <a href="/categories.php" class="btn btn-outline-primary btn-lg">Browse All Categories</a>        </div>
     </section>
 
     <!-- Call to Action Section -->
@@ -88,7 +82,7 @@
         <div class="container">
             <h2 class="mb-3">Share Your Own Recipes</h2>
             <p class="lead">Join our community and share your culinary creations with the world.</p>
-            <a href="/register" class="btn btn-light btn-lg mt-3">Join Now</a>
+            <a href="/register.php" class="btn btn-light btn-lg mt-3">Join Now</a>
         </div>
     </section>
 </main>

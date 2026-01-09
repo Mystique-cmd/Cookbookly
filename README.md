@@ -33,20 +33,16 @@ cd Cookbookly
 
 ### 3. Database Setup
 
+The project uses a consolidated `setup.sql` script that handles all database schema creation, table alterations, and data population.
+
 1.  **Create a new database** in your MySQL/MariaDB server (e.g., named `cookbookly`).
-2.  **Import the initial database schema and data** from the `database.sql` file:
+2.  **Ensure you have the `admin` user and `password` credentials** configured in your MariaDB/MySQL.
+3.  **Run the consolidated setup script.** This command will drop the database if it exists (for a clean start), re-create it, and then execute all schema definitions, alterations, and data insertions:
     ```bash
-    mysql -u your_username -p your_database_name < database.sql
+    mariadb -u admin -p -e "DROP DATABASE IF EXISTS cookbookly; CREATE DATABASE cookbookly;"
+    mariadb -u admin -p cookbookly < setup.sql
     ```
-    *(Replace `your_username` and `your_database_name` with your actual credentials and database name.)*
-3.  **Apply the RBAC migration:** Execute the `add_user_roles.sql` script to add the `role` column to the `users` table:
-    ```bash
-    mysql -u your_username -p your_database_name < add_user_roles.sql
-    ```
-4.  **Apply the Contact Messages table migration:** Execute the `create_contact_messages_table.sql` script to create the `contact_messages` table:
-    ```bash
-    mysql -u your_username -p your_database_name < create_contact_messages_table.sql
-    ```
+    *(You will be prompted to enter the `admin` user's password for each command.)*
 
 ### 4. Environment Configuration
 
@@ -63,10 +59,10 @@ cd Cookbookly
 Navigate to the project's root directory and run:
 
 ```bash
-php -S localhost:8000 router.php
+php -S localhost:8080 -t src
 ```
 
-Then access the application at `http://localhost:8000/`.
+Then access the application at `http://localhost:8080/`.
 
 #### Option B: Apache or Nginx
 
@@ -88,7 +84,27 @@ Open your web browser and navigate to the URL configured for your web server (e.
 *   **Admin:** Full access to all features, including user, recipe, category, and health condition management.
 *   **User:** Can manage their own recipes, favorites, reviews, and health preferences.
 
-Upon registration, users are assigned the 'user' role by default. An administrator can change user roles through the admin dashboard.
+Upon registration, users are assigned the 'user' role by default. To create an initial admin user:
+1.  Register a new user through the application.
+2.  Connect to your MariaDB/MySQL database:
+    ```bash
+    mariadb -u admin -p
+    ```
+    (Enter the `admin` user's password when prompted)
+3.  Use the `cookbookly` database:
+    ```sql
+    USE cookbookly;
+    ```
+4.  Update the registered user's role to 'admin':
+    ```sql
+    UPDATE users SET role = 'admin' WHERE email = 'your_registered_email@example.com';
+    ```
+    (Replace `your_registered_email@example.com` with the email of the user you just registered.)
+5.  Exit the database client:
+    ```sql
+    exit;
+    ```
+You can now log in with these credentials to access the Admin Dashboard.
 
 ## Project Structure
 
@@ -122,9 +138,7 @@ Upon registration, users are assigned the 'user' role by default. An administrat
 │   └── submit_review.php   # Handles recipe review submissions
 ├── .env.example            # Example environment variables
 ├── .gitignore              # Git ignore rules
-├── add_user_roles.sql      # SQL script to add 'role' column to users table
-├── create_contact_messages_table.sql # SQL script to create contact_messages table
-├── database.sql            # Initial database schema and seed data
+├── setup.sql               # Consolidated database schema, migrations, and seed data
 ├── README.md               # Project README file
 └── router.php              # Central routing file
 ```

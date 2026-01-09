@@ -4,19 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/dark-mode.css">
+    <link rel="stylesheet" href="/assets/css/admin.css">
 </head>
 <body>
-    <header>
-        <h1>Admin Dashboard</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Dashboard</a></li>
-                <li><a href="recipes.php">Manage Recipes</a></li>
-                <li><a href="categories.php">Manage Categories</a></li>
-                <li><a href="users.php">Manage Users</a></li>
-                <li><a href="../index.php" target="_blank">View Website</a></li>
-                <li><a href="logout.php">Logout</a></li>
+<a href="#main-content" class="skip-to-main">Skip to Main Content</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/admin/index.php">
+            <i class="fas fa-cog"></i> Admin Dashboard
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/admin/index.php">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/recipes.php">Manage Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/categories.php">Manage Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/users.php">Manage Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.php" target="_blank">View Website</a>
+                </li>
             </ul>
-        </nav>
-    </header>
+            <div class="d-flex">
+                <a href="/admin/logout.php" class="btn btn-outline-secondary me-2">Logout</a>
+                <div class="form-check form-switch ms-3">
+                    <input class="form-check-input" type="checkbox" id="dark-mode-switch">
+                    <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<main id="main-content">

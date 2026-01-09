@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_role = 'user'; // Default role for new users
 
             if (mysqli_stmt_execute($stmt)) {
-                header("location: /login");
+                header("location: /login.php");
                 exit;
             } else {
                 echo "Error: Could not add user. " . mysqli_stmt_error($stmt);
@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <main>
     <div class="login-container">
         <h1>Register</h1>
-        <form action="/register" method="post">
+        <form action="/register.php" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <span><?php echo $username_err; ?></span>
@@ -135,6 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" id="password" name="password" required>
             <span><?php echo $password_err; ?></span>
             <button type="submit">Register</button>
+            <p class="mt-3">Already have an account? <a href="/login.php">Login here</a>.</p>
         </form>
     </div>
 </main>

@@ -39,7 +39,7 @@ mysqli_close($link);
                         <div class="col-md-4 mb-4">
                             <div class="card shadow-sm">
                                 <a href="category.php?id=<?php echo $category['id']; ?>">
-                                    <img src="uploads/categories/<?php echo $category['image_url']; ?>" alt="<?php echo $category['name']; ?>" class="card-img-top">
+                                    <img src="<?php echo $category['image_url']; ?>" alt="<?php echo $category['name']; ?>" class="card-img-top">
                                     <div class="card-body">
                                         <h3 class="card-title"><?php echo $category['name']; ?></h3>
                                         <p class="card-text"><?php echo $category['description']; ?></p>
@@ -60,7 +60,7 @@ mysqli_close($link);
         <div class="container">
             <h2 id="cta-heading-categories" class="mb-3">Have a new category idea?</h2>
             <p class="lead">Suggest a new category to expand our collection!</p>
-            <a href="/register" class="btn btn-light btn-lg mt-3">Suggest Category</a>
+            <a href="/register.php" class="btn btn-light btn-lg mt-3">Suggest Category</a>
         </div>
     </section>
 </main>

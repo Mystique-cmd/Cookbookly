@@ -53,7 +53,7 @@ mysqli_close($link);
         <h1 class="text-center mb-4">Recipes in <?php echo $category_name; ?></h1>
         <?php if (!empty($category['image_url'])) : ?>
             <div class="text-center mb-4">
-                <img src="uploads/categories/<?php echo $category['image_url']; ?>" alt="<?php echo $category_name; ?>" class="img-fluid rounded" style="max-height: 200px; object-fit: cover;">
+                <img src="<?php echo $category['image_url']; ?>" alt="<?php echo $category_name; ?>" class="img-fluid rounded" style="max-height: 200px; object-fit: cover;">
             </div>
         <?php endif; ?>
         <div class="row">

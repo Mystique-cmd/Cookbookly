@@ -56,7 +56,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
-                            session_start();
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
@@ -66,9 +65,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // Redirect user to appropriate dashboard
                             if($role == 'admin'){
-                                header("location: /admin");
+                                header("location: /admin/index.php");
                             } else {
-                                header("location: /user");
+                                header("location: /user/index.php");
                             }
                         } else{
                             // Display an error message if password is not valid
