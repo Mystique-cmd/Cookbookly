@@ -17,7 +17,7 @@ if (isset($_GET["query"]) && !empty(trim($_GET["query"]))) {
     $sanitized_query = mysqli_real_escape_string($link, $search_query);
 
     // Fetch recipes matching the search query in title or description
-    $sql_recipes = "SELECT id, title, description, recipe_image FROM recipes ";
+    $sql_recipes = "SELECT id, title, description, image_url FROM recipes ";
     $sql_recipes .= "WHERE (title LIKE '%" . $sanitized_query . "%' OR description LIKE '%" . $sanitized_query . "%') AND status = 'active' ";
     $sql_recipes .= "ORDER BY created_at DESC";
 
@@ -48,7 +48,7 @@ mysqli_close($link);
                     <div class="col-md-4 mb-4">
                         <div class="card shadow-sm">
                             <a href="recipe.php?id=<?php echo $recipe['id']; ?>">
-                                <img src="uploads/recipes/<?php echo $recipe['recipe_image']; ?>" alt="<?php echo $recipe['title']; ?>" class="card-img-top">
+                                <img src="uploads/recipes/<?php echo $recipe['image_url']; ?>" alt="<?php echo $recipe['title']; ?>" class="card-img-top">
                                 <div class="card-body">
                                     <h3 class="card-title"><?php echo $recipe['title']; ?></h3>
                                     <p class="card-text"><?php echo substr($recipe['description'], 0, 100); ?>...</p>

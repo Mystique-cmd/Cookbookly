@@ -1,261 +1,254 @@
-
-
-INSERT INTO favorites (user_id, recipe_id) VALUES
-(1, 11),  
-(1, 16),  
-(2, 61),  
-(2, 58), 
-(3, 3),  
-(4, 20),  
-(5, 18);  
-
-COMMIT;
-
 BEGIN;
 
-INSERT INTO health_conditions (id, name, description) VALUES
-(1, 'Diabetes', 'Requires low sugar and carb-conscious meals'),
-(2, 'Hypertension', 'Requires low sodium meals'),
-(3, 'Gluten Intolerance', 'Avoids gluten'),
-(4, 'Lactose Intolerance', 'Avoids dairy products');
+INSERT INTO recipes
+(category_id, title, description, prep_time, cook_time, servings, calories)
+VALUES
+-- Breakfast
+(1,'Classic Pancakes','Fluffy breakfast pancakes served with syrup',10,15,4,350),
+(1,'Millet Porridge','Traditional African millet porridge',5,20,3,220),
+(1,'Oatmeal with Fruits','Rolled oats cooked with fresh fruits',5,10,2,260),
+(1,'Chapati and Tea','East African flatbread served with hot tea',20,15,4,320),
+(1,'French Toast','Egg-dipped bread fried until golden',10,10,2,340),
 
-COMMIT;UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1587732625821-cd8c78f5c8b2' WHERE id = 1; 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id = 2;
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1604908177525-5299e845b5be' WHERE id = 3; 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1609757216113-b4ed56c09ce5' WHERE id = 4;
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id = 5;
+-- Brunch
+(2,'Avocado Toast','Toasted bread topped with mashed avocado',5,5,1,280),
+(2,'Eggs Benedict','Poached eggs with hollandaise sauce',15,15,2,420),
+(2,'Fruit Smoothie Bowl','Blended fruits topped with seeds',10,0,1,210),
+(2,'Poha','Indian flattened rice cooked with spices',10,10,2,260),
+(2,'Breakfast Burrito','Eggs, beans, and sausage wrapped in tortilla',15,10,2,450),
 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1556911220-e15b29be8c13' WHERE id = 6; 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id = 7;
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1599566150163-29194dcaad36' WHERE id = 8; 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1621609773144-1cb0b0c28557' WHERE id = 9; -- Poha
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1594007658470-cb20c8efaa48' WHERE id = 10; -- Breakfast Burrito
+-- Lunch
+(3,'Jollof Rice','West African tomato-based rice dish',20,30,5,520),
+(3,'Chicken Caesar Salad','Grilled chicken with romaine lettuce',15,10,2,380),
+(3,'Vegetable Wrap','Mixed vegetables wrapped in flatbread',10,0,1,260),
+(3,'Vegetable Fried Rice','Chinese-style rice stir-fry',10,15,3,410),
+(3,'Quinoa Salad','Healthy salad with quinoa and vegetables',10,0,2,290),
 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id = 11; -- Jollof Rice
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1589302168068-964664d93dc0' WHERE id = 12; -- Chicken Caesar Salad
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1600697272207-87c2f689be36' WHERE id = 13; -- Vegetable Wrap
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id = 14; -- Vegetable Fried Rice
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id = 15; -- Quinoa Salad
+-- Dinner
+(4,'Nyama Choma','Charcoal-grilled East African meat',15,30,4,650),
+(4,'Egusi Soup','Nigerian melon seed soup',20,40,4,700),
+(4,'Chicken Curry','Spiced Indian chicken curry',15,30,4,560),
+(4,'Vegetable Stir Fry','Quick mixed vegetable stir-fry',10,10,2,270),
+(4,'Grilled Salmon','Salmon fillet grilled with herbs',10,15,2,420),
 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1604908177525-5299e845b5be' WHERE id = 16; -- Nyama Choma
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id = 17; -- Egusi Soup
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id = 18; -- Chicken Curry
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1556911220-e15b29be8c13' WHERE id = 19; -- Vegetable Stir Fry
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id = 20; -- Grilled Salmon
+-- Snacks
+(5,'Roasted Plantain','Ripe plantains roasted until caramelized',5,15,2,300),
+(5,'Samosa','Crispy pastry filled with spiced vegetables',20,10,6,180),
+(5,'Popcorn','Lightly salted popped corn',5,5,2,150),
+(5,'Hummus','Creamy chickpea dip with olive oil',10,0,4,200),
+(5,'Chicken Wings','Deep-fried seasoned chicken wings',15,25,4,480);
 
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id = 21; -- Roasted Plantain
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1609757216113-b4ed56c09ce5' WHERE id = 22; -- Samosa
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1604908177525-5299e845b5be' WHERE id = 23; -- Popcorn
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id = 24; -- Hummus
-UPDATE recipes SET image_url = 'https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id = 25; -- Chicken Wings
--- Recipes 26–40 (Appetizers / Main Courses / Side Dishes / Desserts / Baked Goods)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=26; -- Falafel
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=27; -- Bruschetta
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1609757216113-b4ed56c09ce5' WHERE id=28; -- Stuffed Mushrooms
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=29; -- Paneer Tikka
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1587732625821-cd8c78f5c8b2' WHERE id=30; -- Deviled Eggs
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=31; -- Spaghetti Bolognese
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=32; -- Vegetable Couscous
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1604908177525-5299e845b5be' WHERE id=33; -- Pepper Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=34; -- Butter Chicken
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=35; -- Grilled Chicken Breast
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=36; -- Ugali
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1609757216113-b4ed56c09ce5' WHERE id=37; -- Mashed Potatoes
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=38; -- Garlic Bread
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=39; -- Steamed Vegetables
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=40; -- Ratatouille
+INSERT INTO recipes
+(category_id, title, description, prep_time, cook_time, servings, calories)
+VALUES
+-- Appetizers / Starters
+(6,'Falafel','Crispy fried chickpea balls',20,10,4,320),
+(6,'Bruschetta','Grilled bread topped with tomatoes and basil',10,5,4,180),
+(6,'Stuffed Mushrooms','Mushrooms filled with herbs and breadcrumbs',15,20,3,220),
+(6,'Paneer Tikka','Indian grilled paneer cubes',20,15,3,340),
+(6,'Deviled Eggs','Hard-boiled eggs with creamy filling',10,10,4,260),
 
--- Recipes 41–60 (Desserts / Baked Goods)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=41; -- Creme Brulee
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=42; -- Fruit Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=43; -- Tiramisu
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=44; -- Coconut Mandazi
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=45; -- Rice Pudding
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=46; -- Margherita Pizza
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=47; -- Banana Bread
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=48; -- Chocolate Chip Cookies
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=49; -- Gluten-Free Muffins
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=50; -- Lasagna
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=51; -- Boiled Maize
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=52; -- Mutura
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=53; -- Tacos
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=54; -- Bhel Puri
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=55; -- Hot Dogs
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=56; -- Cheeseburger
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=57; -- Fried Chicken
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=58; -- French Fries
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=59; -- Chicken Nuggets
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=60; -- Pizza Slices
+-- Main Courses
+(7,'Spaghetti Bolognese','Italian pasta with meat sauce',15,30,4,680),
+(7,'Vegetable Couscous','Steamed couscous with vegetables',20,20,4,420),
+(7,'Pepper Soup','Spicy African soup with meat',15,40,4,390),
+(7,'Butter Chicken','Creamy tomato-based chicken curry',20,30,4,720),
+(7,'Grilled Chicken Breast','Seasoned grilled chicken breast',10,20,2,360),
 
--- Recipes 61–80 (Beverages / Smoothies / Soups & Stews)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=61; -- Masala Chai
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=62; -- Fresh Lemonade
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=63; -- Iced Coffee
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=64; -- Hot Chocolate
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=65; -- Ginger Tea
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=66; -- Mango Smoothie
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=67; -- Green Detox Juice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=68; -- Banana Peanut Smoothie
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=69; -- Carrot Orange Juice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=70; -- Avocado Smoothie
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=71; -- Chicken Noodle Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=72; -- Beef Stew
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=73; -- Lentil Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=74; -- Tomato Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=75; -- Fish Stew
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=76; -- Greek Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=77; -- Coleslaw
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=78; -- Chicken Avocado Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=79; -- Kachumbari
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=80; -- Caesar Salad
--- Recipes 81–100 (Sandwiches / Wraps / Rice / Pasta / Grilled Foods)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=81; -- Club Sandwich
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=82; -- Veggie Wrap
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=83; -- Chicken Burrito
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=84; -- Fried Rice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=85; -- Spaghetti Carbonara
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=86; -- Grilled Steak
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=87; -- Grilled Chicken Thighs
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=88; -- BBQ Ribs
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=89; -- Grilled Veggies
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=90; -- Grilled Salmon
+-- Side Dishes
+(8,'Ugali','East African maize flour staple',5,15,4,300),
+(8,'Mashed Potatoes','Creamy mashed potatoes with butter',10,20,4,280),
+(8,'Garlic Bread','Toasted bread with garlic butter',10,10,6,240),
+(8,'Steamed Vegetables','Lightly steamed mixed vegetables',5,10,3,150),
+(8,'Ratatouille','French vegetable stew',15,25,4,260),
 
--- Recipes 91–120 (Fried Foods / Seafood / Meat Dishes / Vegetarian / Vegan)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=91; -- Fried Chicken
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=92; -- Fish Fingers
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=93; -- Beef Stir Fry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=94; -- Lentil Curry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=95; -- Vegan Buddha Bowl
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=96; -- Mushroom Risotto
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=97; -- Tofu Stir Fry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=98; -- Veggie Lasagna
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=99; -- Eggplant Parmesan
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=100; -- Chickpea Curry
+-- Desserts
+(9,'Crème Brûlée','French vanilla custard with caramel top',20,30,4,430),
+(9,'Fruit Salad','Mixed fresh seasonal fruits',10,0,3,180),
+(9,'Tiramisu','Italian coffee-flavored dessert',25,20,6,480),
+(9,'Coconut Mandazi','Sweet African fried bread',15,20,6,350),
+(9,'Rice Pudding','Creamy rice-based dessert',10,30,4,390),
 
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=101; -- Shrimp Fried Rice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=102; -- Grilled Lobster
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=103; -- Beef Steak
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=104; -- Pork Chops
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=105; -- Lamb Curry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=106; -- Vegetarian Chili
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=107; -- Vegan Pad Thai
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=108; -- Tofu Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=109; -- Lentil Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=110; -- Grilled Vegetables
+-- Baked Goods
+(10,'Margherita Pizza','Classic pizza with tomato and cheese',20,25,4,700),
+(10,'Banana Bread','Moist baked banana loaf',15,45,6,360),
+(10,'Chocolate Chip Cookies','Soft baked cookies with chocolate chips',15,12,6,420),
+(10,'Gluten-Free Muffins','Muffins made without wheat flour',20,25,6,330),
+(10,'Lasagna','Layered pasta with meat and cheese',30,45,6,780);
 
--- Recipes 111–140 (Gluten-Free / Low-Carb / Keto / Healthy / Comfort)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=111; -- Cauliflower Rice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=112; -- Zucchini Noodles
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=113; -- Keto Pancakes
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=114; -- Grilled Chicken Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=115; -- Protein Smoothie
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=116; -- Sweet Potato Fries
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=117; -- Chicken Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=118; -- Baked Salmon
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=119; -- Veggie Stir Fry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=120; -- Beef Chili
+INSERT INTO recipes
+(category_id, title, description, prep_time, cook_time, servings, calories)
+VALUES
+-- Street Food
+(11,'Boiled Maize','Street-style boiled corn on the cob',5,20,2,180),
+(11,'Mutura','Kenyan spiced sausage',20,30,4,450),
+(11,'Tacos','Soft tortillas filled with seasoned meat',15,10,3,420),
+(11,'Bhel Puri','Indian puffed rice street snack',15,0,2,260),
+(11,'Hot Dogs','Grilled sausage in bread roll',10,10,2,390),
 
--- Recipes 141–160 (Traditional / African / Asian / Chinese / Indian / Italian / Middle Eastern / Western)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=141; -- Jollof Rice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=142; -- Nyama Choma
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=143; -- Egusi Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=144; -- Vegetable Fried Rice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=145; -- Chicken Curry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=146; -- Paneer Tikka
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=147; -- Spaghetti Bolognese
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=148; -- Tiramisu
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=149; -- Margherita Pizza
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=150; -- Falafel
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=151; -- Hummus
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=152; -- Shawarma
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=153; -- Sushi
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=154; -- Pad Thai
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=155; -- Risotto
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=156; -- Baklava
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=157; -- Cheesecake
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=158; -- Hamburger
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=159; -- Hot Dog
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=160; -- Fish & Chips
--- Recipes 161–180 (Kids’ Meals / Party Foods / Holiday / Festive Foods)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=161; -- Mini Pizzas
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=162; -- Chicken Fingers
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=163; -- Mac & Cheese
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=164; -- Fruit Skewers
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=165; -- Chocolate Cupcakes
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=166; -- Meatballs
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=167; -- Spring Rolls
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=168; -- Mini Sandwiches
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=169; -- Cheese Platter
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=170; -- Deviled Eggs
+-- Fast Food
+(12,'Cheeseburger','Beef burger with cheese',15,10,1,520),
+(12,'Fried Chicken','Crispy deep-fried chicken pieces',20,25,4,650),
+(12,'French Fries','Deep-fried potato strips',10,15,3,430),
+(12,'Chicken Nuggets','Breaded bite-sized chicken pieces',15,10,4,480),
+(12,'Pizza Slices','Cheese pizza slices',10,15,3,560),
 
--- Recipes 171–200 (African / Asian / Chinese / Indian / Italian / Middle Eastern / Western / Street Food / Fast Food)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=171; -- Suya
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=172; -- Biryani
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=173; -- Chow Mein
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=174; -- Butter Naan
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=175; -- Gnocchi
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=176; -- Falafel Wrap
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=177; -- Kebabs
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=178; -- Pad See Ew
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=179; -- Chicken Tikka Masala
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=180; -- Pizza Margherita
+-- Beverages / Drinks
+(13,'Masala Chai','Spiced Indian tea with milk',5,10,2,180),
+(13,'Fresh Lemonade','Refreshing lemon drink',5,0,2,140),
+(13,'Iced Coffee','Chilled brewed coffee with milk',5,0,1,160),
+(13,'Hot Chocolate','Warm chocolate drink',5,10,2,240),
+(13,'Ginger Tea','Hot ginger-infused tea',5,10,2,120),
 
--- Recipes 181–220+ (Drinks / Smoothies / Soups / Salads / Sandwiches / Rice / Pasta / Grilled / Fried / Vegan / Gluten-Free)
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=181; -- Mojito
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=182; -- Strawberry Smoothie
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=183; -- Mango Juice
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=184; -- Tomato Basil Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=185; -- Caesar Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=186; -- BLT Sandwich
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=187; -- Fried Rice with Shrimp
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=188; -- Spaghetti with Meatballs
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=189; -- Grilled Chicken Skewers
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=190; -- Veggie Stir Fry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=191; -- Chicken Fajitas
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=192; -- Quinoa Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=193; -- Vegan Chili
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=194; -- Gluten-Free Brownies
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=195; -- Zoodle Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=196; -- Fruit Parfait
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=197; -- Chicken Wrap
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=198; -- Stir-Fried Tofu
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=199; -- Salmon Teriyaki
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=200; -- Chicken Noodle Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=201; -- Lentil Dahl
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=202; -- Vegetable Soup
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=203; -- Grilled Tilapia
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=204; -- Beef Stroganoff
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=205; -- Pad Kra Pao
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=206; -- Mashed Sweet Potatoes
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=207; -- Chicken Satay
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=208; -- Greek Yogurt Parfait
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=209; -- Caprese Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=210; -- Shrimp Tacos
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=211; -- Falafel Bowl
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=212; -- Chicken Quesadilla
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=213; -- Thai Green Curry
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=214; -- Vegetable Biryani
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=215; -- Margherita Flatbread
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1603076464186-26d37aa1f317' WHERE id=216; -- Vegan Tacos
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1601050690596-43a1c243fd1f' WHERE id=217; -- Chicken Pita
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1599785209707-5d59ffdb6de8' WHERE id=218; -- Lentil Salad
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1600891964599-f61ba0e24092' WHERE id=219; -- Grilled Eggplant
-UPDATE recipes SET image_url='https://images.unsplash.com/photo-1617196033800-4a2b46ed870e' WHERE id=220; -- Quinoa Bowl-- ==============================
--- RECENTLY_VIEWED
+-- Smoothies & Juices
+(14,'Mango Smoothie','Blended mango with yogurt',5,0,2,220),
+(14,'Green Detox Juice','Spinach and apple juice blend',5,0,1,180),
+(14,'Banana Peanut Smoothie','Banana smoothie with peanut butter',5,0,2,320),
+(14,'Carrot Orange Juice','Fresh carrot and orange juice',5,0,2,200),
+(14,'Avocado Smoothie','Creamy avocado smoothie',5,0,2,300),
+
+-- Soups & Stews
+(15,'Chicken Noodle Soup','Comforting chicken soup with noodles',15,30,4,360),
+(15,'Beef Stew','Slow-cooked beef stew with vegetables',20,45,4,520),
+(15,'Lentil Soup','Hearty lentil-based soup',10,30,4,340),
+(15,'Tomato Soup','Smooth tomato soup',10,20,3,280),
+(15,'Fish Stew','Spiced fish stew with vegetables',15,35,4,480);
+
+INSERT INTO recipes
+(category_id, title, description, prep_time, cook_time, servings, calories)
+VALUES
+-- Salads
+(16,'Greek Salad','Fresh salad with tomatoes, cucumber, olives and feta',10,0,3,260),
+(16,'Coleslaw','Shredded cabbage salad with creamy dressing',10,0,4,240),
+(16,'Chicken Avocado Salad','Grilled chicken with avocado slices',15,10,2,420),
+(16,'Kachumbari','East African tomato and onion salad',10,0,3,180),
+(16,'Caesar Salad','Classic romaine lettuce salad with dressing',15,0,2,350),
+
+-- Sandwiches & Wraps
+(17,'Club Sandwich','Triple-layer sandwich with chicken and bacon',15,0,2,520),
+(17,'Chicken Shawarma Wrap','Middle Eastern spiced chicken wrap',20,10,2,480),
+(17,'Veggie Sandwich','Whole-grain sandwich with mixed vegetables',10,0,1,320),
+(17,'Tuna Melt','Toasted sandwich with tuna and cheese',10,10,1,460),
+(17,'Falafel Wrap','Falafel balls wrapped with salad and sauce',15,5,2,430),
+
+-- Rice Dishes
+(18,'Pilau','Spiced East African rice dish',20,30,4,540),
+(18,'Fried Rice','Stir-fried rice with vegetables and egg',10,15,3,420),
+(18,'Biryani','Aromatic layered rice with meat and spices',25,40,5,680),
+(18,'Coconut Rice','Rice cooked in coconut milk',10,25,4,460),
+(18,'Spanish Paella','Rice cooked with seafood and saffron',25,35,4,720),
+
+-- Pasta & Noodles
+(19,'Chicken Alfredo','Creamy pasta with grilled chicken',15,25,4,690),
+(19,'Vegetable Noodles','Stir-fried noodles with vegetables',10,15,3,430),
+(19,'Spaghetti Carbonara','Italian pasta with eggs and bacon',15,20,4,650),
+(19,'Ramen','Japanese noodle soup',20,30,3,560),
+(19,'Mac and Cheese','Baked pasta with cheese sauce',15,25,4,720),
+
+-- Grilled Foods
+(20,'Grilled Beef Skewers','Marinated beef grilled on skewers',15,20,4,580),
+(20,'Grilled Vegetables','Assorted vegetables grilled with herbs',10,15,3,260),
+(20,'Grilled Pork Chops','Seasoned pork chops grilled',15,25,2,640),
+(20,'Grilled Tilapia','Whole tilapia grilled with spices',10,20,2,420),
+(20,'BBQ Chicken','Chicken grilled with barbecue sauce',15,30,4,610);
+
+INSERT INTO recipes
+(category_id, title, description, prep_time, cook_time, servings, calories)
+VALUES
+-- Fried Foods
+(21,'Fried Chicken Drumsticks','Crispy seasoned fried chicken',20,25,4,650),
+(21,'Fried Fish','Deep-fried whole fish',15,20,2,540),
+(21,'Onion Rings','Battered and fried onion slices',10,15,3,420),
+(21,'Fried Cassava','Golden fried cassava pieces',10,20,3,460),
+(21,'Fried Tofu','Crispy fried tofu cubes',10,15,3,380),
+
+-- Seafood
+(22,'Grilled Prawns','Garlic-marinated grilled prawns',10,15,2,360),
+(22,'Fish Tacos','Soft tacos filled with seasoned fish',15,10,3,420),
+(22,'Seafood Paella','Spanish rice with mixed seafood',25,35,4,760),
+(22,'Tuna Steak','Pan-seared tuna steak',10,10,2,420),
+(22,'Coconut Fish Curry','Fish simmered in coconut curry sauce',15,30,4,560),
+
+-- Meat Dishes
+(23,'Beef Stroganoff','Beef cooked in creamy mushroom sauce',20,30,4,720),
+(23,'Goat Stew','Slow-cooked goat meat stew',25,50,4,680),
+(23,'Roast Chicken','Whole chicken roasted with herbs',15,60,4,740),
+(23,'Pork Ribs','Oven-baked barbecue pork ribs',20,45,4,820),
+(23,'Lamb Chops','Pan-grilled lamb chops',15,25,2,690),
+
+-- Vegetarian Dishes
+(24,'Vegetable Curry','Mixed vegetables in spiced curry sauce',15,30,4,420),
+(24,'Stuffed Bell Peppers','Peppers stuffed with rice and vegetables',20,35,4,460),
+(24,'Vegetable Lasagna','Layered pasta with vegetables and cheese',25,45,6,720),
+(24,'Mushroom Risotto','Creamy risotto with mushrooms',20,35,4,640),
+(24,'Chickpea Stew','Protein-rich chickpea stew',10,30,4,390),
+
+-- Vegan Dishes
+(25,'Vegan Buddha Bowl','Grains, vegetables, and legumes bowl',15,0,2,420),
+(25,'Lentil Dahl','Indian spiced lentil dish',10,30,4,360),
+(25,'Vegan Stir Fry','Mixed vegetables stir-fried',10,15,3,300),
+(25,'Vegan Tacos','Plant-based tacos with beans',15,10,3,380),
+(25,'Coconut Vegetable Soup','Creamy vegan coconut soup',10,25,4,340),
+
+-- Gluten-Free Foods
+(26,'Grilled Chicken Salad','Chicken salad without gluten',15,10,2,360),
+(26,'Baked Sweet Potatoes','Oven-baked sweet potatoes',10,40,4,320),
+(26,'Rice Noodle Stir Fry','Gluten-free rice noodles with vegetables',10,15,3,410),
+(26,'Quinoa Bowl','Quinoa with roasted vegetables',15,25,2,390),
+(26,'Gluten-Free Brownies','Chocolate brownies without flour',20,30,6,420),
+
+-- Low-Carb / Keto
+(27,'Keto Omelette','Egg omelette with cheese and vegetables',5,10,1,280),
+(27,'Zucchini Noodles','Low-carb noodle alternative',10,10,2,220),
+(27,'Grilled Steak','Simple grilled steak',10,20,2,640),
+(27,'Baked Salmon','Oven-baked salmon fillet',10,20,2,420),
+(27,'Avocado Egg Salad','Low-carb avocado and egg salad',10,0,2,310),
+
+-- Healthy Meals
+(28,'Grilled Chicken Bowl','Balanced chicken and vegetable bowl',15,20,2,420),
+(28,'Steamed Fish and Vegetables','Light steamed fish meal',10,20,2,340),
+(28,'Brown Rice and Beans','Fiber-rich rice and beans',10,30,4,480),
+(28,'Vegetable Soup','Light vegetable soup',10,25,4,260),
+(28,'Fruit Yogurt Parfait','Layered fruit and yogurt dessert',10,0,2,280),
+
+-- Comfort Foods
+(29,'Beef Burger','Juicy homemade beef burger',15,15,1,620),
+(29,'Chicken Pot Pie','Creamy chicken pie',25,45,6,740),
+(29,'Mashed Potatoes and Gravy','Classic comfort side dish',10,20,4,420),
+(29,'Baked Mac and Cheese','Cheesy baked pasta',15,30,6,780),
+(29,'Meatloaf','Oven-baked seasoned meatloaf',20,50,6,760),
+
+-- Traditional Foods
+(30,'Ugali and Sukuma Wiki','Kenyan maize meal with greens',10,20,4,460),
+(30,'Injera with Lentils','Ethiopian flatbread with lentil stew',20,30,4,520),
+(30,'Fufu and Soup','West African cassava dough with soup',25,40,4,680),
+(30,'Miso Soup','Traditional Japanese soup',5,10,2,120),
+(30,'Shepherd’s Pie','British meat and potato pie',25,45,6,740),
+
+-- Kids’ Meals
+(31,'Mini Pancakes','Small fluffy pancakes for kids',10,10,3,280),
+(31,'Chicken Tenders','Breaded chicken strips',15,20,4,460),
+(31,'Mini Hot Dogs','Small hot dogs for kids',10,10,3,420),
+(31,'Cheese Quesadilla','Melted cheese tortilla',5,10,2,380),
+(31,'Fruit Cups','Assorted fruit pieces',5,0,3,160),
+
+-- Party Foods
+(32,'Meatballs','Bite-sized seasoned meatballs',20,25,6,540),
+(32,'Spring Rolls','Crispy vegetable spring rolls',20,15,6,420),
+(32,'Nachos','Tortilla chips with cheese and toppings',10,10,4,620),
+(32,'Chicken Skewers','Grilled party chicken skewers',15,20,6,560),
+(32,'Stuffed Sausages','Sausages filled with herbs and cheese',20,30,6,680),
+
+-- Holiday / Festive Foods
+(33,'Roast Turkey','Whole turkey roasted for celebrations',30,150,8,980),
+(33,'Beef Wellington','Beef wrapped in pastry',45,60,6,860),
+(33,'Christmas Fruit Cake','Rich dried fruit cake',30,90,12,620),
+(33,'Eid Pilau','Festive spiced rice with meat',25,40,6,720),
+(33,'Festive Biriyani','Special occasion layered biryani',30,45,6,780);
+
 -- ==============================
-BEGIN;
-
-INSERT INTO recently_viewed (user_id, recipe_id, viewed_at) VALUES
-(1, 14, NOW()),
-(1, 15, NOW()),
-(2, 61, NOW()),
-(2, 62, NOW()),
-(3, 3, NOW()),
-(4, 20, NOW()),
-(5, 18, NOW());
-
-COMMIT;
-BEGIN;
+-- RECIPE_INGREDIENTS: BATCH 1 (Recipes 1–40)
+-- ==============================
 
 -- Recipe 1: Pancakes
 INSERT INTO recipe_ingredients (recipe_id, ingredient_id, quantity) VALUES
@@ -544,7 +537,7 @@ INSERT INTO recipe_ingredients (recipe_id, ingredient_id, quantity) VALUES
 -- Recipes 61–80 would continue in the same pattern...
 
 -- ==============================
--- RECIPE_INGREDIENTS (Recipes 61–80)
+-- RECIPE_INGREDIENTS: BATCH 2 (Recipes 41–80)
 -- ==============================
 
 INSERT INTO recipe_ingredients (recipe_id, ingredient_id, quantity) VALUES
@@ -1703,529 +1696,6 @@ INSERT INTO recipe_ingredients (recipe_id, ingredient_id, quantity) VALUES
 (220,17,'1'),
 (220,2,'1 cup');
 
-COMMIT;-- ==============================
--- RECIPE_ORIGINS (Recipes 1–40)
--- ==============================
-
-INSERT INTO recipe_origins (recipe_id, country_id) VALUES
--- African Dishes
-(2,1),    -- Millet Porridge -> Kenya
-(4,1),    -- Chapati and Tea -> Kenya
-(11,2),   -- Jollof Rice -> Nigeria
-(16,1),   -- Nyama Choma -> Kenya
-(17,2),   -- Egusi Soup -> Nigeria
-(21,2),   -- Roasted Plantain -> Nigeria
-(59,1),   -- Coconut Mandazi -> Kenya
-
--- Asian Dishes
-(9,5),    -- Poha -> India
-(14,6),   -- Vegetable Fried Rice -> China
-(18,5),   -- Chicken Curry -> India
-(22,5),   -- Samosa -> India
-(44,5),   -- Paneer Tikka -> India
-
--- European Dishes
-(46,7),   -- Spaghetti Bolognese -> Italy
-(56,8),   -- Creme Brulee -> France
-(58,7),   -- Tiramisu -> Italy
-
--- American Dishes
-(1,9),    -- Pancakes -> USA
-(10,9),   -- Breakfast Burrito -> USA
-(7,9),    -- Eggs Benedict -> USA
-(12,9);   -- Chicken Caesar Salad -> USA
-
--- ==============================
--- RECIPE_ORIGINS (Recipes 41–80)
--- ==============================
-
-INSERT INTO recipe_origins (recipe_id, country_id) VALUES
--- Appetizers / Starters
-(41,11),   -- Falafel -> Lebanon
-(42,7),    -- Bruschetta -> Italy
-(43,6),    -- Stuffed Mushrooms -> International
-(44,5),    -- Paneer Tikka -> India
-(45,9),    -- Deviled Eggs -> USA
-
--- Main Courses
-(46,7),    -- Spaghetti Bolognese -> Italy
-(47,8),    -- Vegetable Couscous -> Middle East
-(48,2),    -- Pepper Soup -> Nigeria
-(49,5),    -- Butter Chicken -> India
-(50,6),    -- Grilled Chicken Breast -> International
-
--- Side Dishes
-(51,1),    -- Ugali -> Kenya
-(52,6),    -- Mashed Potatoes -> International
-(53,7),    -- Garlic Bread -> Italy
-(54,6),    -- Steamed Vegetables -> International
-(55,8),    -- Ratatouille -> France
-
--- Desserts
-(56,8),    -- Creme Brulee -> France
-(57,6),    -- Fruit Salad -> International
-(58,7),    -- Tiramisu -> Italy
-(59,1),    -- Coconut Mandazi -> Kenya
-(60,6),    -- Rice Pudding -> International
-
--- Baked Goods
-(61,7),    -- Margherita Pizza -> Italy
-(62,6),    -- Banana Bread -> International
-(63,9),    -- Chocolate Chip Cookies -> USA
-(64,6),    -- Gluten-Free Muffins -> International
-(65,7);    -- Lasagna -> Italy
--- ==============================
--- RECIPE_ORIGINS (Recipes 81–120)
--- ==============================
-
-INSERT INTO recipe_origins (recipe_id, country_id) VALUES
--- Main Courses & Snacks
-(81,7),    -- Spaghetti Carbonara -> Italy
-(82,6),    -- Veggie Burger -> International
-(83,2),    -- Moi Moi -> Nigeria
-(84,1),    -- Sukuma Wiki -> Kenya
-(85,5),    -- Chicken Tikka Masala -> India
-
--- Side Dishes
-(86,6),    -- French Fries -> International
-(87,7),    -- Pesto Pasta -> Italy
-(88,6),    -- Steamed Broccoli -> International
-(89,8),    -- Coq au Vin -> France
-(90,6),    -- Baked Sweet Potatoes -> International
-
--- Desserts
-(91,7),    -- Cannoli -> Italy
-(92,6),    -- Vegan Chocolate Cake -> International
-(93,8),    -- Crêpes -> France
-(94,9),    -- Apple Pie -> USA
-(95,7),    -- Panna Cotta -> Italy
-
--- Baked Goods / Snacks
-(96,6),    -- Muffins -> International
-(97,1),    -- Mandazi -> Kenya
-(98,2),    -- Chin Chin -> Nigeria
-(99,5),    -- Naan Bread -> India
-(100,7),   -- Focaccia -> Italy
-
--- Recipes 101–120
-(101,9),   -- Beef Tacos -> USA
-(102,9),   -- Chicken Nuggets -> USA
-(103,6),   -- Mashed Potatoes -> International
-(104,7),   -- Spaghetti Bolognese -> Italy
-(105,6),   -- Vegetable Omelette -> International
-(106,9),   -- Chicken Sandwich -> USA
-(107,6),   -- Fish and Chips -> International
-(108,13),  -- Beef Kebabs -> Turkey
-(109,5),   -- Chicken Soup -> India
-(110,9),   -- Caesar Wrap -> USA
-(111,13),  -- Beef Meatballs -> Turkey
-(112,6),   -- Vegetable Pasta -> International
-(113,9),   -- Chicken Wings -> USA
-(114,1),   -- Fried Plantain -> Kenya
-(115,2),   -- Beef Pilau -> Nigeria
-(116,5),   -- Vegetable Samosa -> India
-(117,7),   -- Chicken Pizza -> Italy
-(118,14),  -- Rice and Beans -> Thailand
-(119,13),  -- Grilled Steak -> Turkey
-(120,6);   -- Fruit Salad -> International
--- ==============================
--- RECIPE_ORIGINS (Recipes 121–160)
--- ==============================
-
-INSERT INTO recipe_origins (recipe_id, country_id) VALUES
--- Main Courses & Snacks
-(121,6),   -- Veggie Stir Fry -> International
-(122,7),   -- Margherita Pizza -> Italy
-(123,5),   -- Butter Chicken -> India
-(124,6),   -- Lentil Soup -> International
-(125,1),   -- Sukuma Wiki Stew -> Kenya
-
--- Side Dishes
-(126,6),   -- Steamed Rice -> International
-(127,7),   -- Garlic Bread -> Italy
-(128,8),   -- Ratatouille -> France
-(129,9),   -- Coleslaw -> USA
-(130,6),   -- Quinoa Salad -> International
-
--- Desserts
-(131,7),   -- Tiramisu -> Italy
-(132,6),   -- Fruit Parfait -> International
-(133,8),   -- Crème Brûlée -> France
-(134,9),   -- Brownies -> USA
-(135,7),   -- Panna Cotta -> Italy
-
--- Baked Goods / Snacks
-(136,6),   -- Banana Bread -> International
-(137,1),   -- Mandazi -> Kenya
-(138,2),   -- Puff-Puff -> Nigeria
-(139,5),   -- Gulab Jamun -> India
-(140,7),   -- Focaccia -> Italy
-
--- Main Courses
-(141,6),   -- Veggie Burger -> International
-(142,7),   -- Spaghetti Carbonara -> Italy
-(143,5),   -- Chicken Curry -> India
-(144,6),   -- Baked Salmon -> International
-(145,9),   -- BBQ Ribs -> USA
-
--- Side Dishes
-(146,6),   -- Mashed Potatoes -> International
-(147,7),   -- Pesto Pasta -> Italy
-(148,6),   -- Steamed Broccoli -> International
-(149,8),   -- Coq au Vin -> France
-(150,6),   -- Baked Sweet Potatoes -> International
-
--- Desserts
-(151,7),   -- Cannoli -> Italy
-(152,6),   -- Vegan Chocolate Cake -> International
-(153,8),   -- Crêpes -> France
-(154,9),   -- Apple Pie -> USA
-(155,7),   -- Panna Cotta -> Italy
-
--- Baked Goods / Snacks
-(156,6),   -- Muffins -> International
-(157,1),   -- Mandazi -> Kenya
-(158,2),   -- Chin Chin -> Nigeria
-(159,5),   -- Naan Bread -> India
-(160,7);   -- Focaccia -> Italy
-
--- ==============================
--- RECIPE_ORIGINS (Recipes 161–200)
--- ==============================
-
-INSERT INTO recipe_origins (recipe_id, country_id) VALUES
--- Main Courses & Snacks
-(161,6),   -- Veggie Stir Fry -> International
-(162,7),   -- Margherita Pizza -> Italy
-(163,5),   -- Butter Chicken -> India
-(164,6),   -- Lentil Soup -> International
-(165,1),   -- Sukuma Wiki Stew -> Kenya
-
--- Side Dishes
-(166,6),   -- Steamed Rice -> International
-(167,7),   -- Garlic Bread -> Italy
-(168,8),   -- Ratatouille -> France
-(169,9),   -- Coleslaw -> USA
-(170,6),   -- Quinoa Salad -> International
-
--- Desserts
-(171,7),   -- Tiramisu -> Italy
-(172,6),   -- Fruit Parfait -> International
-(173,8),   -- Crème Brûlée -> France
-(174,9),   -- Brownies -> USA
-(175,7),   -- Panna Cotta -> Italy
-
--- Baked Goods / Snacks
-(176,6),   -- Banana Bread -> International
-(177,1),   -- Mandazi -> Kenya
-(178,2),   -- Puff-Puff -> Nigeria
-(179,5),   -- Gulab Jamun -> India
-(180,7),   -- Focaccia -> Italy
-
--- Main Courses
-(181,6),   -- Veggie Burger -> International
-(182,7),   -- Spaghetti Carbonara -> Italy
-(183,5),   -- Chicken Curry -> India
-(184,6),   -- Baked Salmon -> International
-(185,9),   -- BBQ Ribs -> USA
-
--- Side Dishes
-(186,6),   -- Mashed Potatoes -> International
-(187,7),   -- Pesto Pasta -> Italy
-(188,6),   -- Steamed Broccoli -> International
-(189,8),   -- Coq au Vin -> France
-(190,6),   -- Baked Sweet Potatoes -> International
-
--- Desserts
-(191,7),   -- Cannoli -> Italy
-(192,6),   -- Vegan Chocolate Cake -> International
-(193,8),   -- Crêpes -> France
-(194,9),   -- Apple Pie -> USA
-(195,7),   -- Panna Cotta -> Italy
-
--- Baked Goods / Snacks
-(196,6),   -- Muffins -> International
-(197,1),   -- Mandazi -> Kenya
-(198,2),   -- Chin Chin -> Nigeria
-(199,5),   -- Naan Bread -> India
-(200,7);   -- Focaccia -> Italy
-
--- ==============================
--- RECIPE_ORIGINS (Recipes 201–220)
--- ==============================
-
-INSERT INTO recipe_origins (recipe_id, country_id) VALUES
--- Main Courses & Snacks
-(201,6),   -- Veggie Stir Fry -> International
-(202,7),   -- Margherita Pizza -> Italy
-(203,5),   -- Butter Chicken -> India
-(204,6),   -- Lentil Soup -> International
-(205,1),   -- Sukuma Wiki Stew -> Kenya
-
--- Side Dishes
-(206,6),   -- Steamed Rice -> International
-(207,7),   -- Garlic Bread -> Italy
-(208,8),   -- Ratatouille -> France
-(209,9),   -- Coleslaw -> USA
-(210,6),   -- Quinoa Salad -> International
-
--- Desserts
-(211,7),   -- Tiramisu -> Italy
-(212,6),   -- Fruit Parfait -> International
-(213,8),   -- Crème Brûlée -> France
-(214,9),   -- Brownies -> USA
-(215,7),   -- Panna Cotta -> Italy
-
--- Baked Goods / Snacks
-(216,6),   -- Banana Bread -> International
-(217,1),   -- Mandazi -> Kenya
-(218,2),   -- Puff-Puff -> Nigeria
-(219,5),   -- Gulab Jamun -> India
-(220,7);   -- Focaccia -> ItalyINSERT INTO recipes
-(category_id, title, description, prep_time, cook_time, servings, calories)
-VALUES
--- Breakfast
-(1,'Classic Pancakes','Fluffy breakfast pancakes served with syrup',10,15,4,350),
-(1,'Millet Porridge','Traditional African millet porridge',5,20,3,220),
-(1,'Oatmeal with Fruits','Rolled oats cooked with fresh fruits',5,10,2,260),
-(1,'Chapati and Tea','East African flatbread served with hot tea',20,15,4,320),
-(1,'French Toast','Egg-dipped bread fried until golden',10,10,2,340),
-
--- Brunch
-(2,'Avocado Toast','Toasted bread topped with mashed avocado',5,5,1,280),
-(2,'Eggs Benedict','Poached eggs with hollandaise sauce',15,15,2,420),
-(2,'Fruit Smoothie Bowl','Blended fruits topped with seeds',10,0,1,210),
-(2,'Poha','Indian flattened rice cooked with spices',10,10,2,260),
-(2,'Breakfast Burrito','Eggs, beans, and sausage wrapped in tortilla',15,10,2,450),
-
--- Lunch
-(3,'Jollof Rice','West African tomato-based rice dish',20,30,5,520),
-(3,'Chicken Caesar Salad','Grilled chicken with romaine lettuce',15,10,2,380),
-(3,'Vegetable Wrap','Mixed vegetables wrapped in flatbread',10,0,1,260),
-(3,'Vegetable Fried Rice','Chinese-style rice stir-fry',10,15,3,410),
-(3,'Quinoa Salad','Healthy salad with quinoa and vegetables',10,0,2,290),
-
--- Dinner
-(4,'Nyama Choma','Charcoal-grilled East African meat',15,30,4,650),
-(4,'Egusi Soup','Nigerian melon seed soup',20,40,4,700),
-(4,'Chicken Curry','Spiced Indian chicken curry',15,30,4,560),
-(4,'Vegetable Stir Fry','Quick mixed vegetable stir-fry',10,10,2,270),
-(4,'Grilled Salmon','Salmon fillet grilled with herbs',10,15,2,420),
-
--- Snacks
-(5,'Roasted Plantain','Ripe plantains roasted until caramelized',5,15,2,300),
-(5,'Samosa','Crispy pastry filled with spiced vegetables',20,10,6,180),
-(5,'Popcorn','Lightly salted popped corn',5,5,2,150),
-(5,'Hummus','Creamy chickpea dip with olive oil',10,0,4,200),
-(5,'Chicken Wings','Deep-fried seasoned chicken wings',15,25,4,480);
-
-INSERT INTO recipes
-(category_id, title, description, prep_time, cook_time, servings, calories)
-VALUES
--- Appetizers / Starters
-(6,'Falafel','Crispy fried chickpea balls',20,10,4,320),
-(6,'Bruschetta','Grilled bread topped with tomatoes and basil',10,5,4,180),
-(6,'Stuffed Mushrooms','Mushrooms filled with herbs and breadcrumbs',15,20,3,220),
-(6,'Paneer Tikka','Indian grilled paneer cubes',20,15,3,340),
-(6,'Deviled Eggs','Hard-boiled eggs with creamy filling',10,10,4,260),
-
--- Main Courses
-(7,'Spaghetti Bolognese','Italian pasta with meat sauce',15,30,4,680),
-(7,'Vegetable Couscous','Steamed couscous with vegetables',20,20,4,420),
-(7,'Pepper Soup','Spicy African soup with meat',15,40,4,390),
-(7,'Butter Chicken','Creamy tomato-based chicken curry',20,30,4,720),
-(7,'Grilled Chicken Breast','Seasoned grilled chicken breast',10,20,2,360),
-
--- Side Dishes
-(8,'Ugali','East African maize flour staple',5,15,4,300),
-(8,'Mashed Potatoes','Creamy mashed potatoes with butter',10,20,4,280),
-(8,'Garlic Bread','Toasted bread with garlic butter',10,10,6,240),
-(8,'Steamed Vegetables','Lightly steamed mixed vegetables',5,10,3,150),
-(8,'Ratatouille','French vegetable stew',15,25,4,260),
-
--- Desserts
-(9,'Crème Brûlée','French vanilla custard with caramel top',20,30,4,430),
-(9,'Fruit Salad','Mixed fresh seasonal fruits',10,0,3,180),
-(9,'Tiramisu','Italian coffee-flavored dessert',25,20,6,480),
-(9,'Coconut Mandazi','Sweet African fried bread',15,20,6,350),
-(9,'Rice Pudding','Creamy rice-based dessert',10,30,4,390),
-
--- Baked Goods
-(10,'Margherita Pizza','Classic pizza with tomato and cheese',20,25,4,700),
-(10,'Banana Bread','Moist baked banana loaf',15,45,6,360),
-(10,'Chocolate Chip Cookies','Soft baked cookies with chocolate chips',15,12,6,420),
-(10,'Gluten-Free Muffins','Muffins made without wheat flour',20,25,6,330),
-(10,'Lasagna','Layered pasta with meat and cheese',30,45,6,780);
-
-INSERT INTO recipes
-(category_id, title, description, prep_time, cook_time, servings, calories)
-VALUES
--- Street Food
-(11,'Boiled Maize','Street-style boiled corn on the cob',5,20,2,180),
-(11,'Mutura','Kenyan spiced sausage',20,30,4,450),
-(11,'Tacos','Soft tortillas filled with seasoned meat',15,10,3,420),
-(11,'Bhel Puri','Indian puffed rice street snack',15,0,2,260),
-(11,'Hot Dogs','Grilled sausage in bread roll',10,10,2,390),
-
--- Fast Food
-(12,'Cheeseburger','Beef burger with cheese',15,10,1,520),
-(12,'Fried Chicken','Crispy deep-fried chicken pieces',20,25,4,650),
-(12,'French Fries','Deep-fried potato strips',10,15,3,430),
-(12,'Chicken Nuggets','Breaded bite-sized chicken pieces',15,10,4,480),
-(12,'Pizza Slices','Cheese pizza slices',10,15,3,560),
-
--- Beverages / Drinks
-(13,'Masala Chai','Spiced Indian tea with milk',5,10,2,180),
-(13,'Fresh Lemonade','Refreshing lemon drink',5,0,2,140),
-(13,'Iced Coffee','Chilled brewed coffee with milk',5,0,1,160),
-(13,'Hot Chocolate','Warm chocolate drink',5,10,2,240),
-(13,'Ginger Tea','Hot ginger-infused tea',5,10,2,120),
-
--- Smoothies & Juices
-(14,'Mango Smoothie','Blended mango with yogurt',5,0,2,220),
-(14,'Green Detox Juice','Spinach and apple juice blend',5,0,1,180),
-(14,'Banana Peanut Smoothie','Banana smoothie with peanut butter',5,0,2,320),
-(14,'Carrot Orange Juice','Fresh carrot and orange juice',5,0,2,200),
-(14,'Avocado Smoothie','Creamy avocado smoothie',5,0,2,300),
-
--- Soups & Stews
-(15,'Chicken Noodle Soup','Comforting chicken soup with noodles',15,30,4,360),
-(15,'Beef Stew','Slow-cooked beef stew with vegetables',20,45,4,520),
-(15,'Lentil Soup','Hearty lentil-based soup',10,30,4,340),
-(15,'Tomato Soup','Smooth tomato soup',10,20,3,280),
-(15,'Fish Stew','Spiced fish stew with vegetables',15,35,4,480);
-
-INSERT INTO recipes
-(category_id, title, description, prep_time, cook_time, servings, calories)
-VALUES
--- Salads
-(16,'Greek Salad','Fresh salad with tomatoes, cucumber, olives and feta',10,0,3,260),
-(16,'Coleslaw','Shredded cabbage salad with creamy dressing',10,0,4,240),
-(16,'Chicken Avocado Salad','Grilled chicken with avocado slices',15,10,2,420),
-(16,'Kachumbari','East African tomato and onion salad',10,0,3,180),
-(16,'Caesar Salad','Classic romaine lettuce salad with dressing',15,0,2,350),
-
--- Sandwiches & Wraps
-(17,'Club Sandwich','Triple-layer sandwich with chicken and bacon',15,0,2,520),
-(17,'Chicken Shawarma Wrap','Middle Eastern spiced chicken wrap',20,10,2,480),
-(17,'Veggie Sandwich','Whole-grain sandwich with mixed vegetables',10,0,1,320),
-(17,'Tuna Melt','Toasted sandwich with tuna and cheese',10,10,1,460),
-(17,'Falafel Wrap','Falafel balls wrapped with salad and sauce',15,5,2,430),
-
--- Rice Dishes
-(18,'Pilau','Spiced East African rice dish',20,30,4,540),
-(18,'Fried Rice','Stir-fried rice with vegetables and egg',10,15,3,420),
-(18,'Biryani','Aromatic layered rice with meat and spices',25,40,5,680),
-(18,'Coconut Rice','Rice cooked in coconut milk',10,25,4,460),
-(18,'Spanish Paella','Rice cooked with seafood and saffron',25,35,4,720),
-
--- Pasta & Noodles
-(19,'Chicken Alfredo','Creamy pasta with grilled chicken',15,25,4,690),
-(19,'Vegetable Noodles','Stir-fried noodles with vegetables',10,15,3,430),
-(19,'Spaghetti Carbonara','Italian pasta with eggs and bacon',15,20,4,650),
-(19,'Ramen','Japanese noodle soup',20,30,3,560),
-(19,'Mac and Cheese','Baked pasta with cheese sauce',15,25,4,720),
-
--- Grilled Foods
-(20,'Grilled Beef Skewers','Marinated beef grilled on skewers',15,20,4,580),
-(20,'Grilled Vegetables','Assorted vegetables grilled with herbs',10,15,3,260),
-(20,'Grilled Pork Chops','Seasoned pork chops grilled',15,25,2,640),
-(20,'Grilled Tilapia','Whole tilapia grilled with spices',10,20,2,420),
-(20,'BBQ Chicken','Chicken grilled with barbecue sauce',15,30,4,610);
-
-INSERT INTO recipes
-(category_id, title, description, prep_time, cook_time, servings, calories)
-VALUES
--- Fried Foods
-(21,'Fried Chicken Drumsticks','Crispy seasoned fried chicken',20,25,4,650),
-(21,'Fried Fish','Deep-fried whole fish',15,20,2,540),
-(21,'Onion Rings','Battered and fried onion slices',10,15,3,420),
-(21,'Fried Cassava','Golden fried cassava pieces',10,20,3,460),
-(21,'Fried Tofu','Crispy fried tofu cubes',10,15,3,380),
-
--- Seafood
-(22,'Grilled Prawns','Garlic-marinated grilled prawns',10,15,2,360),
-(22,'Fish Tacos','Soft tacos filled with seasoned fish',15,10,3,420),
-(22,'Seafood Paella','Spanish rice with mixed seafood',25,35,4,760),
-(22,'Tuna Steak','Pan-seared tuna steak',10,10,2,420),
-(22,'Coconut Fish Curry','Fish simmered in coconut curry sauce',15,30,4,560),
-
--- Meat Dishes
-(23,'Beef Stroganoff','Beef cooked in creamy mushroom sauce',20,30,4,720),
-(23,'Goat Stew','Slow-cooked goat meat stew',25,50,4,680),
-(23,'Roast Chicken','Whole chicken roasted with herbs',15,60,4,740),
-(23,'Pork Ribs','Oven-baked barbecue pork ribs',20,45,4,820),
-(23,'Lamb Chops','Pan-grilled lamb chops',15,25,2,690),
-
--- Vegetarian Dishes
-(24,'Vegetable Curry','Mixed vegetables in spiced curry sauce',15,30,4,420),
-(24,'Stuffed Bell Peppers','Peppers stuffed with rice and vegetables',20,35,4,460),
-(24,'Vegetable Lasagna','Layered pasta with vegetables and cheese',25,45,6,720),
-(24,'Mushroom Risotto','Creamy risotto with mushrooms',20,35,4,640),
-(24,'Chickpea Stew','Protein-rich chickpea stew',10,30,4,390),
-
--- Vegan Dishes
-(25,'Vegan Buddha Bowl','Grains, vegetables, and legumes bowl',15,0,2,420),
-(25,'Lentil Dahl','Indian spiced lentil dish',10,30,4,360),
-(25,'Vegan Stir Fry','Mixed vegetables stir-fried',10,15,3,300),
-(25,'Vegan Tacos','Plant-based tacos with beans',15,10,3,380),
-(25,'Coconut Vegetable Soup','Creamy vegan coconut soup',10,25,4,340),
-
--- Gluten-Free Foods
-(26,'Grilled Chicken Salad','Chicken salad without gluten',15,10,2,360),
-(26,'Baked Sweet Potatoes','Oven-baked sweet potatoes',10,40,4,320),
-(26,'Rice Noodle Stir Fry','Gluten-free rice noodles with vegetables',10,15,3,410),
-(26,'Quinoa Bowl','Quinoa with roasted vegetables',15,25,2,390),
-(26,'Gluten-Free Brownies','Chocolate brownies without flour',20,30,6,420),
-
--- Low-Carb / Keto
-(27,'Keto Omelette','Egg omelette with cheese and vegetables',5,10,1,280),
-(27,'Zucchini Noodles','Low-carb noodle alternative',10,10,2,220),
-(27,'Grilled Steak','Simple grilled steak',10,20,2,640),
-(27,'Baked Salmon','Oven-baked salmon fillet',10,20,2,420),
-(27,'Avocado Egg Salad','Low-carb avocado and egg salad',10,0,2,310),
-
--- Healthy Meals
-(28,'Grilled Chicken Bowl','Balanced chicken and vegetable bowl',15,20,2,420),
-(28,'Steamed Fish and Vegetables','Light steamed fish meal',10,20,2,340),
-(28,'Brown Rice and Beans','Fiber-rich rice and beans',10,30,4,480),
-(28,'Vegetable Soup','Light vegetable soup',10,25,4,260),
-(28,'Fruit Yogurt Parfait','Layered fruit and yogurt dessert',10,0,2,280),
-
--- Comfort Foods
-(29,'Beef Burger','Juicy homemade beef burger',15,15,1,620),
-(29,'Chicken Pot Pie','Creamy chicken pie',25,45,6,740),
-(29,'Mashed Potatoes and Gravy','Classic comfort side dish',10,20,4,420),
-(29,'Baked Mac and Cheese','Cheesy baked pasta',15,30,6,780),
-(29,'Meatloaf','Oven-baked seasoned meatloaf',20,50,6,760),
-
--- Traditional Foods
-(30,'Ugali and Sukuma Wiki','Kenyan maize meal with greens',10,20,4,460),
-(30,'Injera with Lentils','Ethiopian flatbread with lentil stew',20,30,4,520),
-(30,'Fufu and Soup','West African cassava dough with soup',25,40,4,680),
-(30,'Miso Soup','Traditional Japanese soup',5,10,2,120),
-(30,'Shepherd’s Pie','British meat and potato pie',25,45,6,740),
-
--- Kids’ Meals
-(31,'Mini Pancakes','Small fluffy pancakes for kids',10,10,3,280),
-(31,'Chicken Tenders','Breaded chicken strips',15,20,4,460),
-(31,'Mini Hot Dogs','Small hot dogs for kids',10,10,3,420),
-(31,'Cheese Quesadilla','Melted cheese tortilla',5,10,2,380),
-(31,'Fruit Cups','Assorted fruit pieces',5,0,3,160),
-
--- Party Foods
-(32,'Meatballs','Bite-sized seasoned meatballs',20,25,6,540),
-(32,'Spring Rolls','Crispy vegetable spring rolls',20,15,6,420),
-(32,'Nachos','Tortilla chips with cheese and toppings',10,10,4,620),
-(32,'Chicken Skewers','Grilled party chicken skewers',15,20,6,560),
-(32,'Stuffed Sausages','Sausages filled with herbs and cheese',20,30,6,680),
-
--- Holiday / Festive Foods
-(33,'Roast Turkey','Whole turkey roasted for celebrations',30,150,8,980),
-(33,'Beef Wellington','Beef wrapped in pastry',45,60,6,860),
-(33,'Christmas Fruit Cake','Rich dried fruit cake',30,90,12,620),
-(33,'Eid Pilau','Festive spiced rice with meat',25,40,6,720),
-(33,'Festive Biriyani','Special occasion layered biryani',30,45,6,780);
 -- ==============================
 -- RECIPE STEPS: Recipes 26–80
 -- ==============================
@@ -3472,41 +2942,5 @@ INSERT INTO reviews (recipe_id, rating, comment, created_at) VALUES
 (3, 5, 'Healthy and filling breakfast', NOW()),
 (20, 4, 'Salmon cooked to perfection', NOW()),
 (18, 5, 'Great curry flavors', NOW());
-
-COMMIT;-- ==============================
--- USER_ACTIVITY
--- ==============================
-BEGIN;
-
-INSERT INTO user_activity (user_id, activity_type, recipe_id, activity_time) VALUES
-(1, 'viewed', 11, NOW()),
-(1, 'favorited', 16, NOW()),
-(2, 'viewed', 61, NOW()),
-(2, 'favorited', 58, NOW()),
-(3, 'viewed', 3, NOW()),
-(4, 'viewed', 20, NOW()),
-(5, 'favorited', 18, NOW());
-
-COMMIT;-- ==============================
--- USER_HEALTH_PREFERENCES
--- ==============================
-BEGIN;
-
--- Linking users to their health conditions
-INSERT INTO user_health_preferences (user_id, health_condition_id) VALUES
-(1, 1), -- Wycliff has Diabetes
-(2, 2), -- Alice has Hypertension
-(3, 3), -- Bob has Gluten Intolerance
-(4, 4), -- Carol has Lactose Intolerance
-(5, 1); -- David has Diabetes
-
-COMMIT;BEGIN;
-
-INSERT INTO users (id, username, email, password_hash, created_at) VALUES
-(1, 'wycliff', 'wycliff@example.com', 'hashed_password1', NOW()),
-(2, 'alice', 'alice@example.com', 'hashed_password2', NOW()),
-(3, 'bob', 'bob@example.com', 'hashed_password3', NOW()),
-(4, 'carol', 'carol@example.com', 'hashed_password4', NOW()),
-(5, 'david', 'david@example.com', 'hashed_password5', NOW());
 
 COMMIT;
